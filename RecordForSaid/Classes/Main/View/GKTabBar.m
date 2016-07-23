@@ -16,7 +16,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         // 2.设置整体渲染颜色
-        [self setTintColor:[UIColor orangeColor]];
+        [self setTintColor:[UIColor colorWithRed:231/255.0 green:129/255.0 blue:112/255.0 alpha:1]];
         [self addSubview:self.publishButton];
     }
     return self;
