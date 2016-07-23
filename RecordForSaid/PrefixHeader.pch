@@ -1,0 +1,32 @@
+//
+//  PrefixHeader.pch
+//  RecordForSaid
+//
+//  Created by 花菜ChrisCai on 2016/7/23.
+//  Copyright © 2016年 花菜ChrisCai. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "UIColor+GKExtension.h"
+#import "UIView+GKFrame.h"
+#import "GKDatabase.h"
+#import "NSDate+GKExtension.h"
+#import "UIView+GKExtension.h"
+/** 自定义Log */
+#ifdef DEBUG
+#define GKLog(...) NSLog(@"%s 第%d行 \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#else
+#define GKLog(...)
+#endif
+
+/** 快速输出方法调用栈 */
+#define GKLogFunc GKLog(@"%s", __func__);
+/** 屏幕宽高 */
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+/// 弱引用
+#define GKWeakSelf(type)  __weak typeof(type) weak##type = type;
+/// 强引用
+#define GKStrongSelf(type)  __strong typeof(type) type = weak##type;
+#endif /* PrefixHeader_pch */

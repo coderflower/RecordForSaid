@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GKSettingViewController">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="wlb-gS-Fqe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="关于我说你听" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Am-ym-uS7">
+                    <rect key="frame" x="10" y="74" width="355" height="27"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kpL-v7-GeJ">
+                    <rect key="frame" x="10" y="110" width="355" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="oaz-xt-drR"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOT-LT-wBR">
+                    <rect key="frame" x="10" y="121" width="355" height="224"/>
+                    <string key="text">我说你听是一款专为懒人设计的
+
+用于记录日常生活中的点点滴滴
+
+您只需要通过语音输入,即可完成记录
+
+首页记录当天的所有记录
+
+我的界面则记录所有的日记记录
+
+点击底部中间按钮即可进入编辑界面</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开发者:https://github.com/ChrisCaixx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNa-BU-PWV">
+                    <rect key="frame" x="0.0" y="425" width="375" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="kpL-v7-GeJ" firstAttribute="leading" secondItem="8Am-ym-uS7" secondAttribute="leading" id="0DW-Dt-f5V"/>
+                <constraint firstItem="8Am-ym-uS7" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="6ts-Xg-gmd"/>
+                <constraint firstItem="QOT-LT-wBR" firstAttribute="trailing" secondItem="8Am-ym-uS7" secondAttribute="trailing" id="AZi-vE-hSl"/>
+                <constraint firstItem="QOT-LT-wBR" firstAttribute="top" secondItem="kpL-v7-GeJ" secondAttribute="bottom" constant="10" id="D76-rM-GsA"/>
+                <constraint firstAttribute="trailing" secondItem="PNa-BU-PWV" secondAttribute="trailing" constant="20" id="DVq-pJ-nTb"/>
+                <constraint firstItem="QOT-LT-wBR" firstAttribute="leading" secondItem="8Am-ym-uS7" secondAttribute="leading" id="HP0-of-ckO"/>
+                <constraint firstAttribute="trailing" secondItem="PNa-BU-PWV" secondAttribute="trailing" id="OKA-ug-Mur"/>
+                <constraint firstItem="PNa-BU-PWV" firstAttribute="top" secondItem="QOT-LT-wBR" secondAttribute="bottom" constant="80" id="WFD-xK-PgC"/>
+                <constraint firstItem="kpL-v7-GeJ" firstAttribute="trailing" secondItem="8Am-ym-uS7" secondAttribute="trailing" id="ewg-0D-4sV"/>
+                <constraint firstItem="kpL-v7-GeJ" firstAttribute="top" secondItem="8Am-ym-uS7" secondAttribute="bottom" constant="10" id="hjS-EA-d4P"/>
+                <constraint firstItem="kpL-v7-GeJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mTs-pI-Rra"/>
+                <constraint firstItem="8Am-ym-uS7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="74" id="put-s6-INO"/>
+                <constraint firstItem="PNa-BU-PWV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="sEk-JB-APU"/>
+                <constraint firstAttribute="trailing" secondItem="8Am-ym-uS7" secondAttribute="trailing" constant="10" id="sTJ-qj-Cl6"/>
+                <constraint firstItem="PNa-BU-PWV" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="xFd-iG-37U"/>
+                <constraint firstItem="PNa-BU-PWV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="zAb-PU-aoF"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="mTs-pI-Rra"/>
+                    <exclude reference="DVq-pJ-nTb"/>
+                    <exclude reference="xFd-iG-37U"/>
+                    <exclude reference="zAb-PU-aoF"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="430.5" y="315.5"/>
+        </view>
+    </objects>
+</document>
