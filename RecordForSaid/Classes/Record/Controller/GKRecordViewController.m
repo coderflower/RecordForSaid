@@ -89,6 +89,7 @@ static const CGFloat kVoiceButtonWidth = 100;
         _showTextView.font = [UIFont systemFontOfSize:15];
         _showTextView.placeholder = @"点击这里输入想要记录的事情";
         _showTextView.placeholderColor = [UIColor lightGrayColor];
+        _showTextView.delegate = self;
         _showTextView.inputAccessoryView = self.toolBar;
     }
     return _showTextView;
@@ -101,6 +102,7 @@ static const CGFloat kVoiceButtonWidth = 100;
         _textField.leftViewMode = UITextFieldViewModeAlways;
         _textField.leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 5, 0)];
         _textField.inputAccessoryView = self.toolBar;
+        _textField.delegate = self;
         _textField.placeholder = @"在这里输入标题";
     }
     return _textField;
@@ -181,13 +183,11 @@ static const CGFloat kVoiceButtonWidth = 100;
 #pragma mark - =============== UITextViewDelegate ===============
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     self.editingTitle = YES;
-    [self startListenning];
 }
 #pragma mark -
 #pragma mark - =============== UITextFieldDelegate ===============
 - (void)textViewDidBeginEditing:(UITextView *)textView {
     self.editingTitle = NO;
-    [self startListenning];
 }
 
 
