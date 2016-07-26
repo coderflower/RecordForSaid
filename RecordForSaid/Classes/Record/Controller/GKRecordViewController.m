@@ -78,6 +78,7 @@ static const CGFloat kVoiceButtonWidth = 100;
             weakself.showTextView.text = @"";
         }];
     }];
+    
 }
 
 #pragma mark -

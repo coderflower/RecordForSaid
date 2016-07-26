@@ -137,6 +137,14 @@ typedef NS_ENUM(NSInteger ,GKDatabaseSelectLocation){
 - (BOOL)deleteObject:(Class)className withString:(NSString *)string;
 
 /**
+ *  移除指定对象
+ *
+ *  @param object 模型对象
+ *
+ *  @return 删除结果
+ */
+- (BOOL)deleteObject:(id)object;
+/**
  *  清空数据库某表格的内容
  *
  *  @param className 类名
@@ -153,4 +161,13 @@ typedef NS_ENUM(NSInteger ,GKDatabaseSelectLocation){
  *  @return 删除结果
  */
 - (BOOL)deleteTableWithTableName:(id)className;
+
+/**
+ *  执行自定义的sql语句
+ *
+ *  @param sqlString 自定义的sql语句
+ *
+ *  @return 执行结果
+ */
+- (BOOL)executeSqlString:(NSString *)sqlString;
 @end

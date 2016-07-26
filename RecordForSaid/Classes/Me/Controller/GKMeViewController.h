@@ -6,8 +6,8 @@
 //  Copyright © 2016年 花菜ChrisCai. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GKBaseViewController.h"
 
-@interface GKMeViewController : UITableViewController
+@interface GKMeViewController : GKBaseViewController
 
 @end

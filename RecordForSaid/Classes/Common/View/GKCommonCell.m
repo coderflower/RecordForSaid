@@ -8,8 +8,10 @@
 
 #import "GKCommonCell.h"
 @interface GKCommonCell ()
+@property (weak, nonatomic) IBOutlet UIView *bgView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+
 /** 背景颜色数组 */
 @property(nonatomic, strong) NSArray *colorArray;
 @end
@@ -41,19 +43,26 @@
     }
     return _colorArray;
 }
-- (void)setFrame:(CGRect)frame {
-    frame.origin.x = 10;
-    frame.size.width -= 20;
-    frame.size.height -= 10;
-    [super setFrame:frame];
-}
 
 - (void)setModel:(GKRecordModel *)model {
     _model = model;
     self.timeLabel.text = model.createTime;
     self.titleLabel.text = model.title;
-    self.contentView.backgroundColor = self.colorArray[arc4random_uniform(10)];
+    self.bgView.backgroundColor = self.colorArray[arc4random_uniform(10)];
     self.titleLabel.backgroundColor = self.contentView.backgroundColor;
     self.timeLabel.backgroundColor = self.contentView.backgroundColor;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    
+    for (UIView *subView in self.subviews){
+        // 获取删除按钮,修改高度
+        if([subView isKindOfClass:NSClassFromString(@"UITableViewCellDeleteConfirmationView")]){
+            subView.height = self.bgView.height;
+            subView.y = (self.height - subView.height) * 0.5;
+        }
+    }
+
 }
 @end

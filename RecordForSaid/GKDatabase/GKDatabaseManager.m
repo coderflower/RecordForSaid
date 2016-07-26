@@ -408,6 +408,25 @@ static sqlite3 *database;
     return [self executeSqlString:sqlString];
 }
 
+- (BOOL)deleteObject:(id)object {
+    // 获取类的属性和sql类型
+    NSDictionary * propertsDict = [GKObjcProperty getSQLProperties:[object class]];
+    // 拼接字符串
+    NSMutableString * sqlString = [NSMutableString string];
+    [propertsDict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull value, BOOL * _Nonnull stop) {
+        if ([value isEqualToString:@"integer"] || [value isEqualToString:@"real"]) {
+            [sqlString appendFormat:@"%@ = %@ and",key , [object valueForKey:key]];
+        }else {
+            [sqlString appendFormat:@"%@ = '%@' and ",key , [object valueForKey:key]];
+        }
+    }];
+    // 删除最后多余的and
+    NSRange rang = NSMakeRange(sqlString.length-@"and".length-1, @"and".length+1);
+    [sqlString deleteCharactersInRange:rang];
+    
+    return [self deleteObject:[object class] withString:sqlString];
+}
+
 /// 清空数据库某表格的内容
 - (BOOL)clearTableWithName:(id)className {
 
