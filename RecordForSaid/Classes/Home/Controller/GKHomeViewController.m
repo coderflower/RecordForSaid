@@ -26,6 +26,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"Home"];
     [GKThemeTool setTheme];
   
     NSString * timeStr = [[NSDate new]gk_yyyyMMddTimeString];
@@ -40,6 +41,11 @@
     self.tableView.rowHeight = 70;
     self.tableView.contentInsetTop = GKCommonMargin + GKNavBarHeight;
     self.tableView.contentInsetBottom = GKCommonMargin + GKTabBarHeight;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"Home"];
 }
 - (void)setupNav {
     GKWeakSelf(self)

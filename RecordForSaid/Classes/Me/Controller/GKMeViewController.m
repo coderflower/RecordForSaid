@@ -25,6 +25,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"Me"];
     // 获取今天的日记 , 并倒序排序
     self.dataSource = [[[GKDatabaseManager sharedManager] selecteDataWithClass:[GKRecordModel class]] reverseObjectEnumerator].allObjects.mutableCopy;
     [self.tableView reloadData];
@@ -36,7 +37,10 @@
     self.tableView.contentInsetTop = GKCommonMargin + GKNavBarHeight;
     self.tableView.contentInsetBottom = GKCommonMargin + GKTabBarHeight;
 }
-
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"Me"];
+}
 - (void)setupNav {
     GKWeakSelf(self)
     

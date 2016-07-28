@@ -8,6 +8,7 @@
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
+#import "UMMobClick/MobClick.h"
 #import "UIColor+GKExtension.h"
 #import "UIView+GKFrame.h"
 #import "GKDatabase.h"

@@ -36,6 +36,10 @@
 		8341F08E1D43BA82006B730F /* GKDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8341F08D1D43BA82006B730F /* GKDetailViewController.xib */; };
 		8341F0911D43D9A1006B730F /* GKAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341F0901D43D9A1006B730F /* GKAboutViewController.m */; };
 		8341F0931D43D9F2006B730F /* GKAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8341F0921D43D9F2006B730F /* GKAboutViewController.xib */; };
+		835BEC401D4A6813002C0103 /* jpush-ios-2.1.8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 835BEC3E1D4A6813002C0103 /* jpush-ios-2.1.8.a */; };
+		835BEC421D4A6838002C0103 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835BEC411D4A6838002C0103 /* CFNetwork.framework */; };
+		835BEC441D4A6845002C0103 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835BEC431D4A6845002C0103 /* CoreFoundation.framework */; };
+		835BEC461D4A6883002C0103 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835BEC451D4A6883002C0103 /* Security.framework */; };
 		837314D11D436E880021EC47 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838ED4211D4319F3005D4687 /* AudioToolbox.framework */; };
 		837314D21D436EAD0021EC47 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838ED4251D431A08005D4687 /* SystemConfiguration.framework */; };
 		838ED3E21D42F06B005D4687 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 838ED3E11D42F06B005D4687 /* main.m */; };
@@ -51,9 +55,11 @@
 		83F9C35F1D473CDD0059746D /* GKCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F9C35D1D473CDD0059746D /* GKCommonCell.m */; };
 		83F9C3601D473CDD0059746D /* GKCommonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F9C35E1D473CDD0059746D /* GKCommonCell.xib */; };
 		83F9C3631D473CFC0059746D /* GKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F9C3621D473CFC0059746D /* GKBaseViewController.m */; };
+		8E6290FC085687CD016E573D /* libPods-RecordForSaid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA31E32E138E8762F1F6125 /* libPods-RecordForSaid.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		544BB35FA2788E3A9E93DC1F /* Pods-RecordForSaid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecordForSaid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecordForSaid/Pods-RecordForSaid.debug.xcconfig"; sourceTree = "<group>"; };
 		8321D0271D49ADCF000B7B1D /* GKConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKConst.h; sourceTree = "<group>"; };
 		8321D0281D49ADCF000B7B1D /* GKConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKConst.m; sourceTree = "<group>"; };
 		8321D02A1D49DD13000B7B1D /* UIImage+GKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GKExtension.h"; sourceTree = "<group>"; };
@@ -99,6 +105,11 @@
 		8341F08F1D43D9A1006B730F /* GKAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAboutViewController.h; sourceTree = "<group>"; };
 		8341F0901D43D9A1006B730F /* GKAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAboutViewController.m; sourceTree = "<group>"; };
 		8341F0921D43D9F2006B730F /* GKAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKAboutViewController.xib; sourceTree = "<group>"; };
+		835BEC3E1D4A6813002C0103 /* jpush-ios-2.1.8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-2.1.8.a"; sourceTree = "<group>"; };
+		835BEC3F1D4A6813002C0103 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		835BEC411D4A6838002C0103 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		835BEC431D4A6845002C0103 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		835BEC451D4A6883002C0103 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		838ED3DD1D42F06B005D4687 /* RecordForSaid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecordForSaid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838ED3E11D42F06B005D4687 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		838ED3E31D42F06B005D4687 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -128,6 +139,8 @@
 		83F9C35E1D473CDD0059746D /* GKCommonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKCommonCell.xib; sourceTree = "<group>"; };
 		83F9C3611D473CFC0059746D /* GKBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBaseViewController.h; sourceTree = "<group>"; };
 		83F9C3621D473CFC0059746D /* GKBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBaseViewController.m; sourceTree = "<group>"; };
+		BFA31E32E138E8762F1F6125 /* libPods-RecordForSaid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RecordForSaid.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E65400139CBBDA64717D24D7 /* Pods-RecordForSaid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecordForSaid.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecordForSaid/Pods-RecordForSaid.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,16 +148,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				835BEC461D4A6883002C0103 /* Security.framework in Frameworks */,
+				8341F0441D4379C4006B730F /* CoreGraphics.framework in Frameworks */,
+				837314D21D436EAD0021EC47 /* SystemConfiguration.framework in Frameworks */,
+				8341F0461D4379D1006B730F /* CoreTelephony.framework in Frameworks */,
+				835BEC441D4A6845002C0103 /* CoreFoundation.framework in Frameworks */,
+				835BEC421D4A6838002C0103 /* CFNetwork.framework in Frameworks */,
 				8341F05E1D438DF4006B730F /* libsqlite3.tbd in Frameworks */,
 				8341F04D1D437AA3006B730F /* libz.tbd in Frameworks */,
 				8341F04B1D437A1E006B730F /* AddressBook.framework in Frameworks */,
 				8341F0491D437A17006B730F /* AVFoundation.framework in Frameworks */,
 				8341F0481D4379EA006B730F /* CoreLocation.framework in Frameworks */,
-				8341F0461D4379D1006B730F /* CoreTelephony.framework in Frameworks */,
-				8341F0441D4379C4006B730F /* CoreGraphics.framework in Frameworks */,
+				835BEC401D4A6813002C0103 /* jpush-ios-2.1.8.a in Frameworks */,
 				8341F0431D43763F006B730F /* iflyMSC.framework in Frameworks */,
-				837314D21D436EAD0021EC47 /* SystemConfiguration.framework in Frameworks */,
 				837314D11D436E880021EC47 /* AudioToolbox.framework in Frameworks */,
+				8E6290FC085687CD016E573D /* libPods-RecordForSaid.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +260,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		835BEC3D1D4A67FA002C0103 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				835BEC3E1D4A6813002C0103 /* jpush-ios-2.1.8.a */,
+				835BEC3F1D4A6813002C0103 /* JPUSHService.h */,
+				8341F0551D438D77006B730F /* GKDatabase */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
 		838ED3D41D42F06B005D4687 = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +285,8 @@
 				838ED4211D4319F3005D4687 /* AudioToolbox.framework */,
 				838ED3DF1D42F06B005D4687 /* RecordForSaid */,
 				838ED3DE1D42F06B005D4687 /* Products */,
+				B28541FD7D278A19DC15032D /* Pods */,
+				F628040BFA94FE50485CD242 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -271,7 +301,7 @@
 		838ED3DF1D42F06B005D4687 /* RecordForSaid */ = {
 			isa = PBXGroup;
 			children = (
-				8341F0551D438D77006B730F /* GKDatabase */,
+				835BEC3D1D4A67FA002C0103 /* Lib */,
 				8341F0421D43763F006B730F /* iflyMSC.framework */,
 				838ED3F71D42F07A005D4687 /* Classes */,
 				838ED40C1D42F07A005D4687 /* Other */,
@@ -519,6 +549,26 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B28541FD7D278A19DC15032D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				544BB35FA2788E3A9E93DC1F /* Pods-RecordForSaid.debug.xcconfig */,
+				E65400139CBBDA64717D24D7 /* Pods-RecordForSaid.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F628040BFA94FE50485CD242 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				835BEC451D4A6883002C0103 /* Security.framework */,
+				835BEC431D4A6845002C0103 /* CoreFoundation.framework */,
+				835BEC411D4A6838002C0103 /* CFNetwork.framework */,
+				BFA31E32E138E8762F1F6125 /* libPods-RecordForSaid.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -526,9 +576,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 838ED3F41D42F06B005D4687 /* Build configuration list for PBXNativeTarget "RecordForSaid" */;
 			buildPhases = (
+				D71B273B9D28A0B2E802FEAD /* 📦 Check Pods Manifest.lock */,
 				838ED3D91D42F06B005D4687 /* Sources */,
 				838ED3DA1D42F06B005D4687 /* Frameworks */,
 				838ED3DB1D42F06B005D4687 /* Resources */,
+				231035A2A45A4A539158B859 /* 📦 Embed Pods Frameworks */,
+				47ACCF6B1FB8506D72575679 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -589,6 +642,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		231035A2A45A4A539158B859 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecordForSaid/Pods-RecordForSaid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47ACCF6B1FB8506D72575679 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecordForSaid/Pods-RecordForSaid-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D71B273B9D28A0B2E802FEAD /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		838ED3D91D42F06B005D4687 /* Sources */ = {
@@ -730,6 +831,7 @@
 		};
 		838ED3F51D42F06B005D4687 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 544BB35FA2788E3A9E93DC1F /* Pods-RecordForSaid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -752,6 +854,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RecordForSaid/Lib",
+					"$(PROJECT_DIR)/RecordForSaid",
 				);
 				MACH_O_TYPE = mh_execute;
 				ONLY_ACTIVE_ARCH = NO;
@@ -765,6 +868,7 @@
 		};
 		838ED3F61D42F06B005D4687 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E65400139CBBDA64717D24D7 /* Pods-RecordForSaid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -787,6 +891,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RecordForSaid/Lib",
+					"$(PROJECT_DIR)/RecordForSaid",
 				);
 				MACH_O_TYPE = mh_execute;
 				ONLY_ACTIVE_ARCH = NO;

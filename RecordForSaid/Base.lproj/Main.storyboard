@@ -28,7 +28,7 @@
         <scene sceneID="i0Z-2o-8Qs">
             <objects>
                 <navigationController title="我的" id="bFI-Pd-p5n" customClass="GKNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的" image="icon_tabbar_me_active_25x25_" id="liH-SO-y3e"/>
+                    <tabBarItem key="tabBarItem" title="所有" image="icon_tabbar_me_active_25x25_" id="liH-SO-y3e"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KvC-WL-5TV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -64,7 +64,7 @@
         <scene sceneID="whc-Jm-O2x">
             <objects>
                 <navigationController title="主页" id="WKk-it-Lbe" customClass="GKNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="主页" image="icon_tabbar_home_active_25x25_" id="0Bx-Yr-QYM"/>
+                    <tabBarItem key="tabBarItem" title="今日" image="icon_tabbar_home_active_25x25_" id="0Bx-Yr-QYM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rKP-yP-pnJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

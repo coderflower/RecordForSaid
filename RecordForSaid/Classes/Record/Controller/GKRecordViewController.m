@@ -46,6 +46,7 @@ static const CGFloat kMargin = 10;
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"record"];
     self.editingTitle = YES;
 }
 - (void)viewWillLayoutSubviews {
@@ -54,6 +55,10 @@ static const CGFloat kMargin = 10;
     self.contentTextView.frame = CGRectMake(kMargin, 119, self.view.width - kMargin * 2, 300);
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"record"];
+}
 /// 初始化子控件
 - (void)setupSubviews {
     [self.view addSubview:self.contentTextView];

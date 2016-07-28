@@ -22,7 +22,7 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+    [MobClick beginLogPageView:@"about"];
     if ([[NSUserDefaults standardUserDefaults]boolForKey: kNightModelKey]) {
         self.view.backgroundColor = GKNightBackgroundColor;
         self.developerLabel.textColor = GKDaytimeBackgroundColor;
@@ -36,4 +36,9 @@
     }
 }
 
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"about"];
+}
 @end

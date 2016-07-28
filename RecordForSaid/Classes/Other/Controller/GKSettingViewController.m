@@ -28,11 +28,16 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [MobClick beginLogPageView:@"setting"];
     self.pushNoteSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:kPushNotelKey];
     self.nightModelSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:kNightModelKey];
     [self setColor];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [MobClick endLogPageView:@"setting"];
+}
 /// 夜间模式开关
 - (IBAction)nightModel:(UISwitch *)sender {
     [[NSUserDefaults standardUserDefaults] setBool:sender.isOn forKey:kNightModelKey];
