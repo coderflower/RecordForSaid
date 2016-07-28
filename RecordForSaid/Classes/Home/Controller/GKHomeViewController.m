@@ -54,11 +54,11 @@
         __strong typeof(weakself) self = weakself;
         
         [self sf_setLoading:YES];
-        id<SVScriptBundle> bundle = [[SVOnlineAppBundle alloc] initWithURL:[NSURL URLWithString:@"http://1.myvoa.applinzi.com/com.yzx.imyvoa.plugins.pkg"]];
+        id<SVScriptBundle> bundle = [[SVOnlineAppBundle alloc] initWithURL:[NSURL URLWithString:@"http://1.myvoa.applinzi.com/explorer.pkg"]];
         if (!bundle) {
-            bundle = [[SVScriptBundleRepository defaultRespository] scriptBundleWithBundleId:@"com.yzx.imyvoa.plugins"];
+            bundle = [[SVScriptBundleRepository defaultRespository] scriptBundleWithBundleId:@"explorer"];
         } else {
-            [[SVScriptBundleRepository defaultRespository] repositScriptBundle:bundle newBundleId:@"com.yzx.imyvoa.plugins"];
+            [[SVScriptBundleRepository defaultRespository] repositScriptBundle:bundle newBundleId:@"explorer"];
         }
         dispatch_async(dispatch_get_main_queue(), ^{
             if (bundle) {
