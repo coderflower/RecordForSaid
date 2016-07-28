@@ -11,7 +11,15 @@
 #import "GKRecordModel.h"
 #import "GKBlockedBarButtonItem.h"
 #import "GKSettingViewController.h"
+
+#import <Savanna/Savanna.h>
+#import <SFFoundation/SFFoundation.h>
+#import <SFiOSKit/SFiOSKit.h>
+
 @interface GKHomeViewController ()
+
+@property (nonatomic, strong) SVApp *pluginApp;
+
 @end
 
 @implementation GKHomeViewController
@@ -41,6 +49,30 @@
     GKWeakSelf(self)
     self.navigationItem.rightBarButtonItem = [GKBlockedBarButtonItem blockedBarButtonItemWithTitle:@"设置" eventHandler:^{
         [weakself.navigationController pushViewController:[[GKSettingViewController alloc] init] animated:YES];
+    }];
+    self.navigationItem.leftBarButtonItem = [GKBlockedBarButtonItem blockedBarButtonItemWithTitle:@"🚀" eventHandler:^{
+        __strong typeof(weakself) self = weakself;
+        
+        [self sf_setLoading:YES];
+        id<SVScriptBundle> bundle = [[SVOnlineAppBundle alloc] initWithURL:[NSURL URLWithString:@"http://1.myvoa.applinzi.com/com.yzx.imyvoa.plugins.pkg"]];
+        if (!bundle) {
+            bundle = [[SVScriptBundleRepository defaultRespository] scriptBundleWithBundleId:@"com.yzx.imyvoa.plugins"];
+        } else {
+            [[SVScriptBundleRepository defaultRespository] repositScriptBundle:bundle newBundleId:@"com.yzx.imyvoa.plugins"];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (bundle) {
+                SVApp *app = [[SVApp alloc] initWithScriptBundle:bundle relatedViewController:self];
+                
+                self.pluginApp = app;
+                [SVAppManager runApp:app];
+                
+                [self sf_setLoading:NO];
+            } else {
+                [UIAlertView sf_alertWithTitle:@"温馨提示" message:@"加载出错了，请稍后再试" completion:nil];
+                [self sf_setLoading:NO];
+            }
+        });
     }];
 }
 @end

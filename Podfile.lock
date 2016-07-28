@@ -1,0 +1,64 @@
+PODS:
+  - ASIHTTPRequest (1.8.2):
+    - ASIHTTPRequest/ASIWebPageRequest (= 1.8.2)
+    - ASIHTTPRequest/CloudFiles (= 1.8.2)
+    - ASIHTTPRequest/Core (= 1.8.2)
+    - ASIHTTPRequest/S3 (= 1.8.2)
+  - ASIHTTPRequest/ASIWebPageRequest (1.8.2):
+    - ASIHTTPRequest/Core
+  - ASIHTTPRequest/CloudFiles (1.8.2):
+    - ASIHTTPRequest/Core
+  - ASIHTTPRequest/Core (1.8.2):
+    - Reachability
+  - ASIHTTPRequest/S3 (1.8.2):
+    - ASIHTTPRequest/Core
+  - Reachability (3.2)
+  - Savanna (0.0.1):
+    - ASIHTTPRequest (~> 1.8.2)
+    - ZipArchive (~> 1.2.0)
+    - ZipKit (~> 1.0.1)
+  - SFFoundation (1.0.0):
+    - SFFoundation/ARC (= 1.0.0)
+    - SFFoundation/MRC (= 1.0.0)
+  - SFFoundation/ARC (1.0.0):
+    - SFFoundation/MRC
+  - SFFoundation/MRC (1.0.0)
+  - SFiOSKit (1.0.0):
+    - SFFoundation
+  - ZipArchive (1.2.0)
+  - ZipKit (1.0.3)
+
+DEPENDENCIES:
+  - Savanna (from `https://github.com/yang2507366/Savanna.git`)
+  - SFFoundation (from `https://github.com/yangzexin/SFLibraries.git`)
+  - SFiOSKit (from `https://github.com/yangzexin/SFLibraries.git`)
+
+EXTERNAL SOURCES:
+  Savanna:
+    :git: https://github.com/yang2507366/Savanna.git
+  SFFoundation:
+    :git: https://github.com/yangzexin/SFLibraries.git
+  SFiOSKit:
+    :git: https://github.com/yangzexin/SFLibraries.git
+
+CHECKOUT OPTIONS:
+  Savanna:
+    :commit: ad1b03acdbe4ff433253f8f1465aad00cb450b9d
+    :git: https://github.com/yang2507366/Savanna.git
+  SFFoundation:
+    :commit: 062f6031d49a07bfe5430f1ee38b8c01e9f04b9d
+    :git: https://github.com/yangzexin/SFLibraries.git
+  SFiOSKit:
+    :commit: 062f6031d49a07bfe5430f1ee38b8c01e9f04b9d
+    :git: https://github.com/yangzexin/SFLibraries.git
+
+SPEC CHECKSUMS:
+  ASIHTTPRequest: ec013992946676b7978dcbde6396d57312d21db4
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  Savanna: fefa468e09793cc5e611e2acea6863ed90180d93
+  SFFoundation: aff55b3de1a7f52e323f7d59163830755bafdf12
+  SFiOSKit: 36515035c50b92fd8050350864e8a37e9ac55116
+  ZipArchive: 83ea626ea99bae97743ae6413aeb493dd4e48335
+  ZipKit: 594735e7ad2fd3ee7349759681a0423a1b296572
+
+COCOAPODS: 0.39.0
