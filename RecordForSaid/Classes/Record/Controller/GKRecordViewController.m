@@ -12,13 +12,14 @@
 #import "GKPlaceholderTextView.h"
 #import <iflyMSC/iflyMSC.h>
 static const CGFloat kVoiceButtonWidth = 100;
+static const CGFloat kMargin = 10;
 @interface GKRecordViewController ()<IFlyRecognizerViewDelegate,UITextViewDelegate,UITextFieldDelegate>
 /// 声明语音识别视图属性
 @property (strong, nonatomic) IFlyRecognizerView *iflyRecognizerView;
 /// 接收语音结果的数组
 @property (strong, nonatomic) NSMutableString *resultString;
 /// 用于显示记录内容
-@property (strong, nonatomic) GKPlaceholderTextView *showTextView;
+@property (strong, nonatomic) GKPlaceholderTextView *contentTextView;
 /** 用于显示记录标题 */
 @property(nonatomic, strong) UITextField *textField;
 /** 开始录音按钮 */
@@ -36,24 +37,26 @@ static const CGFloat kVoiceButtonWidth = 100;
     [super viewDidLoad];
     // 创建表格
     [[GKDatabaseManager sharedManager] creatTableWithClassName:[GKRecordModel class]];
+    // 禁用系统默认的偏移量
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = GKRGBColor(220, 220, 220);
     [self setupNav];
     [self setupSubviews];
 }
+
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.editingTitle = YES;
 }
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
-    self.textField.frame = CGRectMake(10, 74, self.view.width - 20, 35);
-    self.showTextView.frame = CGRectMake(10, 119, self.view.width - 20, 300);
+    self.textField.frame = CGRectMake(kMargin, kMargin + GKNavBarHeight, self.view.width - kMargin * 2, 35);
+    self.contentTextView.frame = CGRectMake(kMargin, 119, self.view.width - kMargin * 2, 300);
 }
 
 /// 初始化子控件
 - (void)setupSubviews {
-    [self.view addSubview:self.showTextView];
+    [self.view addSubview:self.contentTextView];
     [self.view addSubview:self.textField];
     self.iflyRecognizerView = [[IFlyRecognizerView alloc] initWithCenter:self.view.center];
     [self.view addSubview:self.voiceButton];
@@ -67,7 +70,7 @@ static const CGFloat kVoiceButtonWidth = 100;
         [weakself.view endEditing:YES];
         GKRecordModel * model = [[GKRecordModel alloc]init];
         model.title = self.textField.text;
-        model.record = self.showTextView.text;
+        model.record = self.contentTextView.text;
         model.createTime = [[NSDate new] gk_yyyyMMddHHmmTimeString];
         if (model.title.length || model.record.length) {
             // 保存到数据库中
@@ -75,7 +78,7 @@ static const CGFloat kVoiceButtonWidth = 100;
         }
         [weakself dismissViewControllerAnimated:YES completion:^{
             weakself.textField.text =@"";
-            weakself.showTextView.text = @"";
+            weakself.contentTextView.text = @"";
         }];
     }];
     
@@ -83,17 +86,17 @@ static const CGFloat kVoiceButtonWidth = 100;
 
 #pragma mark -
 #pragma mark - =============== 懒加载 ===============
-- (GKPlaceholderTextView *)showTextView {
-    if (!_showTextView) {
-        _showTextView =  [[GKPlaceholderTextView alloc] init];
-        _showTextView.backgroundColor = [UIColor whiteColor];
-        _showTextView.font = [UIFont systemFontOfSize:15];
-        _showTextView.placeholder = @"点击这里输入想要记录的事情";
-        _showTextView.placeholderColor = [UIColor lightGrayColor];
-        _showTextView.delegate = self;
-        _showTextView.inputAccessoryView = self.toolBar;
+- (GKPlaceholderTextView *)contentTextView {
+    if (!_contentTextView) {
+        _contentTextView =  [[GKPlaceholderTextView alloc] init];
+        _contentTextView.backgroundColor = [UIColor whiteColor];
+        _contentTextView.font = [UIFont systemFontOfSize:15];
+        _contentTextView.placeholder = @"点击这里输入想要记录的事情";
+        _contentTextView.placeholderColor = [UIColor lightGrayColor];
+        _contentTextView.delegate = self;
+        _contentTextView.inputAccessoryView = self.toolBar;
     }
-    return _showTextView;
+    return _contentTextView;
 }
 
 - (UITextField *)textField {
@@ -144,9 +147,9 @@ static const CGFloat kVoiceButtonWidth = 100;
         self.editingTitle = YES;
         [self.textField resignFirstResponder];
     }
-    if ([self.showTextView isFirstResponder]) {
+    if ([self.contentTextView isFirstResponder]) {
         self.editingTitle = NO;
-        [self.showTextView resignFirstResponder];
+        [self.contentTextView resignFirstResponder];
     }
 }
 
@@ -208,7 +211,7 @@ static const CGFloat kVoiceButtonWidth = 100;
     if (self.editingTitle) {
         self.textField.text = [self.textField.text stringByAppendingString:self.resultString];
     }else {
-        self.showTextView.text = [self.showTextView.text stringByAppendingString:self.resultString];
+        self.contentTextView.text = [self.contentTextView.text stringByAppendingString:self.resultString];
     }
 }
 

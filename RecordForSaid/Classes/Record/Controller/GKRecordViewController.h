@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GKRecordViewController : UIViewController
+@class GKRecordViewController,GKRecordModel;
+@protocol GKRecordViewControllerDelegate <NSObject>
 
+@optional
+
+- (void)recordViewController:(GKRecordViewController *)recordViewController completeEditingRecord:(GKRecordModel *)record;
+
+@end
+
+@interface GKRecordViewController : UIViewController
+/** 代理 */
+@property(nonatomic, weak) id<GKRecordViewControllerDelegate> delegate;
 @end

@@ -10,7 +10,7 @@
 #import "GKCommonCell.h"
 #import "GKRecordModel.h"
 #import "GKBlockedBarButtonItem.h"
-#import "GKSettingViewController.h"
+#import "GKAboutViewController.h"
 @interface GKHomeViewController ()
 @end
 
@@ -26,21 +26,25 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [GKThemeTool setTheme];
+  
     NSString * timeStr = [[NSDate new]gk_yyyyMMddTimeString];
     // 获取今天的日记 ,并倒序排序
     self.dataSource = [[[GKDatabaseManager sharedManager] selectObject:[GKRecordModel class] propertyName:@"createTime" type:GKDatabaseSelectRangOfString content:timeStr] reverseObjectEnumerator].allObjects.mutableCopy;
     [self.tableView reloadData];
+    
 }
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     self.tableView.rowHeight = 70;
-    self.tableView.contentInsetTop = 5 + 64;
+    self.tableView.contentInsetTop = GKCommonMargin + GKNavBarHeight;
+    self.tableView.contentInsetBottom = GKCommonMargin + GKTabBarHeight;
 }
 - (void)setupNav {
     GKWeakSelf(self)
-    self.navigationItem.rightBarButtonItem = [GKBlockedBarButtonItem blockedBarButtonItemWithTitle:@"设置" eventHandler:^{
-        [weakself.navigationController pushViewController:[[GKSettingViewController alloc] init] animated:YES];
+    self.navigationItem.rightBarButtonItem = [GKBlockedBarButtonItem blockedBarButtonItemWithTitle:@"关于" eventHandler:^{
+        [weakself.navigationController pushViewController:[[GKAboutViewController alloc] init] animated:YES];
     }];
 }
 @end

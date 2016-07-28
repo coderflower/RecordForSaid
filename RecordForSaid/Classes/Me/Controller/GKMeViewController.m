@@ -8,7 +8,9 @@
 
 #import "GKMeViewController.h"
 #import "GKCommonCell.h"
-#include "GKRecordModel.h"
+#import "GKRecordModel.h"
+#import "GKBlockedBarButtonItem.h"
+#import "GKSettingViewController.h"
 @interface GKMeViewController ()
 @end
 
@@ -18,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([GKCommonCell class]) bundle:nil]forCellReuseIdentifier:@"GKCommonCell"];
+    [self setupNav];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -30,6 +33,16 @@
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     self.tableView.rowHeight = 70;
-    self.tableView.contentInsetTop = 5 + 64;
+    self.tableView.contentInsetTop = GKCommonMargin + GKNavBarHeight;
+    self.tableView.contentInsetBottom = GKCommonMargin + GKTabBarHeight;
+}
+
+- (void)setupNav {
+    GKWeakSelf(self)
+    
+    self.navigationItem.rightBarButtonItem = [GKBlockedBarButtonItem blockedBarButtonItemWithTitle:@"设置" eventHandler:^{
+        [weakself.navigationController pushViewController:[[GKSettingViewController alloc] init] animated:YES];
+        
+    }];
 }
 @end

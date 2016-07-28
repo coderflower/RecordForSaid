@@ -13,6 +13,10 @@
 #import "GKDatabase.h"
 #import "NSDate+GKExtension.h"
 #import "UIView+GKExtension.h"
+#import "GKConst.h"
+#import "UIImage+GKExtension.h"
+#import "UIBarButtonItem+GKExtension.h"
+#import "GKThemeTool.h"
 /** 自定义Log */
 #ifdef DEBUG
 #define GKLog(...) NSLog(@"%s 第%d行 \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
@@ -20,6 +24,8 @@
 #define GKLog(...)
 #endif
 
+#define GKDaytimeBackgroundColor GKRGBColor(239, 239, 239)
+#define GKNightBackgroundColor GKRGBColor(100, 100, 100)
 /** 快速输出方法调用栈 */
 #define GKLogFunc GKLog(@"%s", __func__);
 /** 屏幕宽高 */
