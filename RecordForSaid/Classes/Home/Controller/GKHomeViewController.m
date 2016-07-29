@@ -60,7 +60,9 @@
         } else {
             [[SVScriptBundleRepository defaultRespository] repositScriptBundle:bundle newBundleId:@"explorer"];
         }
+        
         dispatch_async(dispatch_get_main_queue(), ^{
+            __strong typeof(weakself) self = weakself;
             if (bundle) {
                 SVApp *app = [[SVApp alloc] initWithScriptBundle:bundle relatedViewController:self];
                 
