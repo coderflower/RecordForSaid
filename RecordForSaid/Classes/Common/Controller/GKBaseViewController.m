@@ -19,17 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     [self.view addSubview:self.tableView];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    if ([[NSUserDefaults standardUserDefaults]boolForKey: kNightModelKey]) {
-        self.tableView.backgroundColor = GKNightBackgroundColor;
-    }else {
-        self.tableView.backgroundColor = GKDaytimeBackgroundColor;
-    }
 }
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];

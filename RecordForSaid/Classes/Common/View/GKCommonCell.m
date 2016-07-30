@@ -19,7 +19,6 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.selectionStyle = UITableViewCellSelectionStyleNone;
-    self.backgroundColor = GKClearColor;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

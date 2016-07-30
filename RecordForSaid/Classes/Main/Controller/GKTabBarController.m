@@ -16,23 +16,23 @@
 
 @implementation GKTabBarController
 
++ (void)initialize {
+    [GKThemeTool setTheme];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-
     [self setupSubviews];
-    
 }
 
 - (void)setupSubviews {
     
     GKTabBar *tabBar = [[GKTabBar alloc]init];
-    tabBar.clipsToBounds = YES;
     // 系统的tabBar属性是readonly,只能利用KVC修改
     [self setValue:tabBar forKey:@"tabBar"];
     GKWeakSelf(self)
     GKNavigationController * nav = [[GKNavigationController alloc]initWithRootViewController:[[GKRecordViewController alloc] init]];
     tabBar.publishClick = ^{
-        [weakself presentViewController:nav animated:YES completion:nil];
+        [weakself presentViewController:[[GKRecordViewController alloc] init] animated:YES completion:nil];
     };
 }
 

@@ -8,16 +8,15 @@
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
-#import "UMMobClick/MobClick.h"
 #import "UIColor+GKExtension.h"
 #import "UIView+GKFrame.h"
 #import "GKDatabase.h"
 #import "NSDate+GKExtension.h"
 #import "UIView+GKExtension.h"
-#import "GKConst.h"
+#import "UMMobClick/MobClick.h"
 #import "UIImage+GKExtension.h"
-#import "UIBarButtonItem+GKExtension.h"
 #import "GKThemeTool.h"
+#import "GKConst.h"
 /** 自定义Log */
 #ifdef DEBUG
 #define GKLog(...) NSLog(@"%s 第%d行 \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])

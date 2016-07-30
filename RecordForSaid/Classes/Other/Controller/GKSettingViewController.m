@@ -41,8 +41,9 @@
 /// 夜间模式开关
 - (IBAction)nightModel:(UISwitch *)sender {
     [[NSUserDefaults standardUserDefaults] setBool:sender.isOn forKey:kNightModelKey];
-    [self setTheme];
     [self setColor];
+    [GKThemeTool setTheme];
+    [self setTheme];
 }
 
 - (void)setColor {
@@ -75,25 +76,18 @@
 
 
 - (void)setTheme {
-    // 获取全局导航条
-    UINavigationBar * navBar = [UINavigationBar appearance];
     NSMutableDictionary * attri = [NSMutableDictionary dictionary];
     if ([[NSUserDefaults standardUserDefaults] boolForKey:kNightModelKey]) {
         // 夜间模式
         [self.navigationController.navigationBar setBackgroundImage:[UIImage gk_imageWithColor:GKRGBColor(85, 85, 85)] forBarMetrics:UIBarMetricsDefault];
-        [self.tabBarController.tabBar  setBackgroundImage:[UIImage gk_imageWithColor:GKRGBColor(85, 85, 85)]];
         attri[NSForegroundColorAttributeName] = [UIColor  whiteColor];
-        [navBar setTintColor:[UIColor whiteColor]];
         [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
     }else {
         // 白天模式
         [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
-         [self.tabBarController.tabBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"]];
         attri[NSForegroundColorAttributeName] = [UIColor  blackColor];
-        [navBar setTintColor:GKRGBColor(85, 85, 85)];
         [self.navigationController.navigationBar setTintColor:GKRGBColor(85, 85, 85)];
     }
-    [navBar setTitleTextAttributes:attri];
     [self.navigationController.navigationBar setTitleTextAttributes:attri];
 }
 

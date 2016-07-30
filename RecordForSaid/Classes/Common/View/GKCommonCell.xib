@@ -11,22 +11,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ek1-Li-Xme" id="udX-BE-XDB">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wxj-jp-PXA">
                         <rect key="frame" x="5" y="5" width="365" height="60"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="847-0n-zgq">
-                                <rect key="frame" x="10" y="10" width="345" height="20.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="5" y="5" width="355" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xW0-pV-JG9">
                                 <rect key="frame" x="230" y="39" width="130" height="16"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="eAt-uF-Tab"/>
                                 </constraints>
@@ -37,10 +35,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="847-0n-zgq" firstAttribute="top" secondItem="wxj-jp-PXA" secondAttribute="top" constant="10" id="Dhk-Sg-VjT"/>
+                            <constraint firstItem="847-0n-zgq" firstAttribute="top" secondItem="wxj-jp-PXA" secondAttribute="top" constant="5" id="Dhk-Sg-VjT"/>
                             <constraint firstAttribute="bottom" secondItem="xW0-pV-JG9" secondAttribute="bottom" constant="5" id="Egb-Tc-J6L"/>
-                            <constraint firstAttribute="trailing" secondItem="847-0n-zgq" secondAttribute="trailing" constant="10" id="ifE-lj-ZIw"/>
-                            <constraint firstItem="847-0n-zgq" firstAttribute="leading" secondItem="wxj-jp-PXA" secondAttribute="leading" constant="10" id="kaz-ql-M55"/>
+                            <constraint firstAttribute="trailing" secondItem="847-0n-zgq" secondAttribute="trailing" constant="5" id="ifE-lj-ZIw"/>
+                            <constraint firstItem="847-0n-zgq" firstAttribute="leading" secondItem="wxj-jp-PXA" secondAttribute="leading" constant="5" id="kaz-ql-M55"/>
                             <constraint firstAttribute="trailing" secondItem="xW0-pV-JG9" secondAttribute="trailing" constant="5" id="mB6-Tx-7ui"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>

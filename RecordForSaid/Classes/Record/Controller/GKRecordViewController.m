@@ -11,19 +11,20 @@
 #import "GKRecordModel.h"
 #import "GKPlaceholderTextView.h"
 #import <iflyMSC/iflyMSC.h>
-static const CGFloat kVoiceButtonWidth = 100;
-static const CGFloat kMargin = 10;
 @interface GKRecordViewController ()<IFlyRecognizerViewDelegate,UITextViewDelegate,UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UIView *topBar;
+@property (weak, nonatomic) IBOutlet UIButton *completeButton;
 /// 声明语音识别视图属性
 @property (strong, nonatomic) IFlyRecognizerView *iflyRecognizerView;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 /// 接收语音结果的数组
 @property (strong, nonatomic) NSMutableString *resultString;
 /// 用于显示记录内容
-@property (strong, nonatomic) GKPlaceholderTextView *contentTextView;
+@property (strong, nonatomic)IBOutlet GKPlaceholderTextView *contentTextView;
 /** 用于显示记录标题 */
-@property(nonatomic, strong) UITextField *textField;
+@property(nonatomic, strong)IBOutlet UITextField *textField;
 /** 开始录音按钮 */
-@property(nonatomic, strong) UIButton *voiceButton;
+@property(nonatomic, strong)IBOutlet UIButton *voiceButton;
 /** 是否正在编辑标题 */
 @property(nonatomic, assign) BOOL editingTitle;;
 /** 工具条 */
@@ -35,10 +36,9 @@ static const CGFloat kMargin = 10;
 #pragma mark - =============== 声明周期方法 ===============
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.autoresizingMask = UIViewAutoresizingNone;
     // 创建表格
     [[GKDatabaseManager sharedManager] creatTableWithClassName:[GKRecordModel class]];
-    // 禁用系统默认的偏移量
-    self.automaticallyAdjustsScrollViewInsets = NO;
     self.view.backgroundColor = GKRGBColor(220, 220, 220);
     [self setupNav];
     [self setupSubviews];
@@ -48,23 +48,46 @@ static const CGFloat kMargin = 10;
     [super viewWillAppear:animated];
     [MobClick beginLogPageView:@"record"];
     self.editingTitle = YES;
-}
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    self.textField.frame = CGRectMake(kMargin, kMargin + GKNavBarHeight, self.view.width - kMargin * 2, 35);
-    self.contentTextView.frame = CGRectMake(kMargin, 119, self.view.width - kMargin * 2, 300);
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:kNightModelKey]) {
+        self.topBar.backgroundColor = GKRGBColor(85, 85, 85);
+        [self.completeButton setTitleColor:GKRGBColor(255, 255, 255) forState:UIControlStateNormal];
+    }else {
+        self.topBar.backgroundColor = GKRGBColor(247, 247, 247);
+        [self.completeButton setTitleColor:GKRGBColor(85, 85, 85) forState:UIControlStateNormal];
+    }
 }
 
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    self.voiceButton.layer.cornerRadius = self.voiceButton.height * 0.5;
+    self.voiceButton.layer.masksToBounds = YES;
+    
+}
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     [MobClick endLogPageView:@"record"];
 }
 /// 初始化子控件
 - (void)setupSubviews {
-    [self.view addSubview:self.contentTextView];
-    [self.view addSubview:self.textField];
-    self.iflyRecognizerView = [[IFlyRecognizerView alloc] initWithCenter:self.view.center];
-    [self.view addSubview:self.voiceButton];
+   
+    self.textField.leftViewMode = UITextFieldViewModeAlways;
+    self.textField.leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 10, 0)];
+    self.textField.inputAccessoryView = self.toolBar;
+    self.textField.delegate = self;
+    self.textField.placeholder = @"在这里输入标题";
+    
+    self.contentTextView.font = [UIFont systemFontOfSize:15];
+    self.contentTextView.placeholder = @"点击这里输入想要记录的事情";
+    self.contentTextView.placeholderColor = [UIColor lightGrayColor];
+    self.contentTextView.delegate = self;
+    self.contentTextView.inputAccessoryView = self.toolBar;
+    
+    self.iflyRecognizerView = [[IFlyRecognizerView alloc] initWithCenter:CGPointMake(kScreenWidth * 0.5, kScreenHeight * 0.5)];
     //设置代理
     self.iflyRecognizerView.delegate = self;
 }
@@ -91,46 +114,6 @@ static const CGFloat kMargin = 10;
 
 #pragma mark -
 #pragma mark - =============== 懒加载 ===============
-- (GKPlaceholderTextView *)contentTextView {
-    if (!_contentTextView) {
-        _contentTextView =  [[GKPlaceholderTextView alloc] init];
-        _contentTextView.backgroundColor = [UIColor whiteColor];
-        _contentTextView.font = [UIFont systemFontOfSize:15];
-        _contentTextView.placeholder = @"点击这里输入想要记录的事情";
-        _contentTextView.placeholderColor = [UIColor lightGrayColor];
-        _contentTextView.delegate = self;
-        _contentTextView.inputAccessoryView = self.toolBar;
-    }
-    return _contentTextView;
-}
-
-- (UITextField *)textField {
-    if (!_textField) {
-        _textField =  [[UITextField alloc] init];
-        _textField.backgroundColor = [UIColor whiteColor];
-        _textField.leftViewMode = UITextFieldViewModeAlways;
-        _textField.leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 5, 0)];
-        _textField.inputAccessoryView = self.toolBar;
-        _textField.delegate = self;
-        _textField.placeholder = @"在这里输入标题";
-    }
-    return _textField;
-}
-- (UIButton *)voiceButton {
-    if (!_voiceButton) {
-        _voiceButton =  [[UIButton alloc] init];
-        _voiceButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_voiceButton setFrame:CGRectMake((self.view.frame.size.width - kVoiceButtonWidth) / 2, self.view.frame.size.height - kVoiceButtonWidth - 10, kVoiceButtonWidth, kVoiceButtonWidth)];
-        [_voiceButton setTitle:@"开始录音" forState:UIControlStateNormal];
-        [_voiceButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        _voiceButton.layer.cornerRadius = kVoiceButtonWidth * 0.5;
-        _voiceButton.layer.masksToBounds = YES;
-        [_voiceButton setBackgroundColor:[UIColor colorWithRed:0.458 green:0.810 blue:1.000 alpha:1.000]];
-        [_voiceButton addTarget:self action:@selector(voiceButtonClick) forControlEvents:UIControlEventTouchUpInside];
-        [_voiceButton setTintColor:[UIColor whiteColor]];
-    }
-    return _voiceButton;
-}
 - (UIToolbar *)toolBar {
     if (!_toolBar) {
         _toolBar =  [[UIToolbar alloc] init];
@@ -158,9 +141,12 @@ static const CGFloat kMargin = 10;
     }
 }
 
-- (void)voiceButtonClick {
+- (IBAction)voiceButtonClick {
     [self.view endEditing:YES];
     [self startListenning];
+}
+- (IBAction)completeButtonClick:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /// 开始识别

@@ -7,13 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8321D0291D49ADCF000B7B1D /* GKConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8321D0281D49ADCF000B7B1D /* GKConst.m */; };
-		8321D02C1D49DD13000B7B1D /* UIImage+GKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8321D02B1D49DD13000B7B1D /* UIImage+GKExtension.m */; };
-		8321D02F1D49DE9D000B7B1D /* UIBarButtonItem+GKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8321D02E1D49DE9D000B7B1D /* UIBarButtonItem+GKExtension.m */; };
-		8321D0331D49E858000B7B1D /* GKSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8321D0311D49E858000B7B1D /* GKSettingViewController.m */; };
-		8321D03B1D4A2A26000B7B1D /* GKThemeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8321D03A1D4A2A26000B7B1D /* GKThemeTool.m */; };
-		8321D03D1D4A2BEB000B7B1D /* colorConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8321D03C1D4A2BEB000B7B1D /* colorConfig.plist */; };
-		8321D03F1D4A483F000B7B1D /* GKSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8321D03E1D4A483F000B7B1D /* GKSettingViewController.xib */; };
+		4E0BA85EC4EFE799D51C5B0F /* libPods-RecordForSaid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CFDBCA2C8C39F355D81CC8F /* libPods-RecordForSaid.a */; };
 		8341F0431D43763F006B730F /* iflyMSC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8341F0421D43763F006B730F /* iflyMSC.framework */; };
 		8341F0441D4379C4006B730F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838ED4231D4319FB005D4687 /* CoreGraphics.framework */; };
 		8341F0461D4379D1006B730F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8341F0451D4379D1006B730F /* CoreTelephony.framework */; };
@@ -34,12 +28,6 @@
 		8341F07E1D43ACF1006B730F /* GKHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341F07D1D43ACF1006B730F /* GKHomeViewController.m */; };
 		8341F08C1D43BA37006B730F /* GKDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341F08B1D43BA37006B730F /* GKDetailViewController.m */; };
 		8341F08E1D43BA82006B730F /* GKDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8341F08D1D43BA82006B730F /* GKDetailViewController.xib */; };
-		8341F0911D43D9A1006B730F /* GKAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341F0901D43D9A1006B730F /* GKAboutViewController.m */; };
-		8341F0931D43D9F2006B730F /* GKAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8341F0921D43D9F2006B730F /* GKAboutViewController.xib */; };
-		835BEC401D4A6813002C0103 /* jpush-ios-2.1.8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 835BEC3E1D4A6813002C0103 /* jpush-ios-2.1.8.a */; };
-		835BEC421D4A6838002C0103 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835BEC411D4A6838002C0103 /* CFNetwork.framework */; };
-		835BEC441D4A6845002C0103 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835BEC431D4A6845002C0103 /* CoreFoundation.framework */; };
-		835BEC461D4A6883002C0103 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835BEC451D4A6883002C0103 /* Security.framework */; };
 		837314D11D436E880021EC47 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838ED4211D4319F3005D4687 /* AudioToolbox.framework */; };
 		837314D21D436EAD0021EC47 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838ED4251D431A08005D4687 /* SystemConfiguration.framework */; };
 		838ED3E21D42F06B005D4687 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 838ED3E11D42F06B005D4687 /* main.m */; };
@@ -52,26 +40,23 @@
 		838ED4141D42F123005D4687 /* GKMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 838ED4131D42F123005D4687 /* GKMeViewController.m */; };
 		838ED4191D42FB73005D4687 /* GKTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 838ED4181D42FB73005D4687 /* GKTabBar.m */; };
 		838ED41C1D42FCB6005D4687 /* UIView+GKFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 838ED41B1D42FCB6005D4687 /* UIView+GKFrame.m */; };
+		83C896E21D4B005D0026D765 /* GKAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C896DD1D4B005D0026D765 /* GKAboutViewController.m */; };
+		83C896E31D4B005D0026D765 /* GKAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C896DE1D4B005D0026D765 /* GKAboutViewController.xib */; };
+		83C896E41D4B005D0026D765 /* GKSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C896E01D4B005D0026D765 /* GKSettingViewController.m */; };
+		83C896E51D4B005D0026D765 /* GKSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C896E11D4B005D0026D765 /* GKSettingViewController.xib */; };
+		83C896EA1D4B00950026D765 /* GKConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C896E71D4B00950026D765 /* GKConst.m */; };
+		83C896EB1D4B00950026D765 /* UIImage+GKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C896E91D4B00950026D765 /* UIImage+GKExtension.m */; };
+		83C896EF1D4B01940026D765 /* GKThemeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 83C896EE1D4B01940026D765 /* GKThemeTool.m */; };
+		83C896F11D4BD1010026D765 /* GKRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83C896F01D4BD1010026D765 /* GKRecordViewController.xib */; };
 		83F9C35F1D473CDD0059746D /* GKCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F9C35D1D473CDD0059746D /* GKCommonCell.m */; };
 		83F9C3601D473CDD0059746D /* GKCommonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F9C35E1D473CDD0059746D /* GKCommonCell.xib */; };
 		83F9C3631D473CFC0059746D /* GKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F9C3621D473CFC0059746D /* GKBaseViewController.m */; };
-		8E6290FC085687CD016E573D /* libPods-RecordForSaid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA31E32E138E8762F1F6125 /* libPods-RecordForSaid.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		544BB35FA2788E3A9E93DC1F /* Pods-RecordForSaid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecordForSaid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecordForSaid/Pods-RecordForSaid.debug.xcconfig"; sourceTree = "<group>"; };
-		8321D0271D49ADCF000B7B1D /* GKConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKConst.h; sourceTree = "<group>"; };
-		8321D0281D49ADCF000B7B1D /* GKConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKConst.m; sourceTree = "<group>"; };
-		8321D02A1D49DD13000B7B1D /* UIImage+GKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GKExtension.h"; sourceTree = "<group>"; };
-		8321D02B1D49DD13000B7B1D /* UIImage+GKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GKExtension.m"; sourceTree = "<group>"; };
-		8321D02D1D49DE9D000B7B1D /* UIBarButtonItem+GKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+GKExtension.h"; sourceTree = "<group>"; };
-		8321D02E1D49DE9D000B7B1D /* UIBarButtonItem+GKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+GKExtension.m"; sourceTree = "<group>"; };
-		8321D0301D49E858000B7B1D /* GKSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKSettingViewController.h; sourceTree = "<group>"; };
-		8321D0311D49E858000B7B1D /* GKSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKSettingViewController.m; sourceTree = "<group>"; };
-		8321D0391D4A2A26000B7B1D /* GKThemeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKThemeTool.h; sourceTree = "<group>"; };
-		8321D03A1D4A2A26000B7B1D /* GKThemeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKThemeTool.m; sourceTree = "<group>"; };
-		8321D03C1D4A2BEB000B7B1D /* colorConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = colorConfig.plist; sourceTree = "<group>"; };
-		8321D03E1D4A483F000B7B1D /* GKSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKSettingViewController.xib; sourceTree = "<group>"; };
+		1CFDBCA2C8C39F355D81CC8F /* libPods-RecordForSaid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RecordForSaid.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B9405457A3C9C002F0D3CF5 /* Pods-RecordForSaid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecordForSaid.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecordForSaid/Pods-RecordForSaid.release.xcconfig"; sourceTree = "<group>"; };
+		80FE49B35EA43067B843BBD5 /* Pods-RecordForSaid.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecordForSaid.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RecordForSaid/Pods-RecordForSaid.debug.xcconfig"; sourceTree = "<group>"; };
 		8341F0421D43763F006B730F /* iflyMSC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = iflyMSC.framework; sourceTree = "<group>"; };
 		8341F0451D4379D1006B730F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		8341F0471D4379EA006B730F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -102,14 +87,6 @@
 		8341F08A1D43BA37006B730F /* GKDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKDetailViewController.h; sourceTree = "<group>"; };
 		8341F08B1D43BA37006B730F /* GKDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKDetailViewController.m; sourceTree = "<group>"; };
 		8341F08D1D43BA82006B730F /* GKDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKDetailViewController.xib; sourceTree = "<group>"; };
-		8341F08F1D43D9A1006B730F /* GKAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAboutViewController.h; sourceTree = "<group>"; };
-		8341F0901D43D9A1006B730F /* GKAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAboutViewController.m; sourceTree = "<group>"; };
-		8341F0921D43D9F2006B730F /* GKAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKAboutViewController.xib; sourceTree = "<group>"; };
-		835BEC3E1D4A6813002C0103 /* jpush-ios-2.1.8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-2.1.8.a"; sourceTree = "<group>"; };
-		835BEC3F1D4A6813002C0103 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
-		835BEC411D4A6838002C0103 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		835BEC431D4A6845002C0103 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		835BEC451D4A6883002C0103 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		838ED3DD1D42F06B005D4687 /* RecordForSaid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecordForSaid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838ED3E11D42F06B005D4687 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		838ED3E31D42F06B005D4687 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -134,13 +111,24 @@
 		838ED4251D431A08005D4687 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		838ED4271D431A11005D4687 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		838ED4291D431A23005D4687 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		83C896DC1D4B005D0026D765 /* GKAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAboutViewController.h; sourceTree = "<group>"; };
+		83C896DD1D4B005D0026D765 /* GKAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAboutViewController.m; sourceTree = "<group>"; };
+		83C896DE1D4B005D0026D765 /* GKAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKAboutViewController.xib; sourceTree = "<group>"; };
+		83C896DF1D4B005D0026D765 /* GKSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKSettingViewController.h; sourceTree = "<group>"; };
+		83C896E01D4B005D0026D765 /* GKSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKSettingViewController.m; sourceTree = "<group>"; };
+		83C896E11D4B005D0026D765 /* GKSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKSettingViewController.xib; sourceTree = "<group>"; };
+		83C896E61D4B00950026D765 /* GKConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKConst.h; sourceTree = "<group>"; };
+		83C896E71D4B00950026D765 /* GKConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKConst.m; sourceTree = "<group>"; };
+		83C896E81D4B00950026D765 /* UIImage+GKExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GKExtension.h"; sourceTree = "<group>"; };
+		83C896E91D4B00950026D765 /* UIImage+GKExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GKExtension.m"; sourceTree = "<group>"; };
+		83C896ED1D4B01940026D765 /* GKThemeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKThemeTool.h; sourceTree = "<group>"; };
+		83C896EE1D4B01940026D765 /* GKThemeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKThemeTool.m; sourceTree = "<group>"; };
+		83C896F01D4BD1010026D765 /* GKRecordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKRecordViewController.xib; sourceTree = "<group>"; };
 		83F9C35C1D473CDD0059746D /* GKCommonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKCommonCell.h; sourceTree = "<group>"; };
 		83F9C35D1D473CDD0059746D /* GKCommonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKCommonCell.m; sourceTree = "<group>"; };
 		83F9C35E1D473CDD0059746D /* GKCommonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKCommonCell.xib; sourceTree = "<group>"; };
 		83F9C3611D473CFC0059746D /* GKBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKBaseViewController.h; sourceTree = "<group>"; };
 		83F9C3621D473CFC0059746D /* GKBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKBaseViewController.m; sourceTree = "<group>"; };
-		BFA31E32E138E8762F1F6125 /* libPods-RecordForSaid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RecordForSaid.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E65400139CBBDA64717D24D7 /* Pods-RecordForSaid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecordForSaid.release.xcconfig"; path = "Pods/Target Support Files/Pods-RecordForSaid/Pods-RecordForSaid.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,35 +136,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				835BEC461D4A6883002C0103 /* Security.framework in Frameworks */,
-				8341F0441D4379C4006B730F /* CoreGraphics.framework in Frameworks */,
-				837314D21D436EAD0021EC47 /* SystemConfiguration.framework in Frameworks */,
-				8341F0461D4379D1006B730F /* CoreTelephony.framework in Frameworks */,
-				835BEC441D4A6845002C0103 /* CoreFoundation.framework in Frameworks */,
-				835BEC421D4A6838002C0103 /* CFNetwork.framework in Frameworks */,
 				8341F05E1D438DF4006B730F /* libsqlite3.tbd in Frameworks */,
 				8341F04D1D437AA3006B730F /* libz.tbd in Frameworks */,
 				8341F04B1D437A1E006B730F /* AddressBook.framework in Frameworks */,
 				8341F0491D437A17006B730F /* AVFoundation.framework in Frameworks */,
 				8341F0481D4379EA006B730F /* CoreLocation.framework in Frameworks */,
-				835BEC401D4A6813002C0103 /* jpush-ios-2.1.8.a in Frameworks */,
+				8341F0461D4379D1006B730F /* CoreTelephony.framework in Frameworks */,
+				8341F0441D4379C4006B730F /* CoreGraphics.framework in Frameworks */,
 				8341F0431D43763F006B730F /* iflyMSC.framework in Frameworks */,
+				837314D21D436EAD0021EC47 /* SystemConfiguration.framework in Frameworks */,
 				837314D11D436E880021EC47 /* AudioToolbox.framework in Frameworks */,
-				8E6290FC085687CD016E573D /* libPods-RecordForSaid.a in Frameworks */,
+				4E0BA85EC4EFE799D51C5B0F /* libPods-RecordForSaid.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8321D0381D4A2A20000B7B1D /* Tools */ = {
+		4BC76BE9C0BC9DD612AFDA32 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8321D0391D4A2A26000B7B1D /* GKThemeTool.h */,
-				8321D03A1D4A2A26000B7B1D /* GKThemeTool.m */,
-				8321D03C1D4A2BEB000B7B1D /* colorConfig.plist */,
+				80FE49B35EA43067B843BBD5 /* Pods-RecordForSaid.debug.xcconfig */,
+				4B9405457A3C9C002F0D3CF5 /* Pods-RecordForSaid.release.xcconfig */,
 			);
-			path = Tools;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		8341F04E1D438B45006B730F /* Record */ = {
@@ -194,6 +177,7 @@
 			children = (
 				8341F0521D438B5E006B730F /* GKRecordViewController.h */,
 				8341F0531D438B5E006B730F /* GKRecordViewController.m */,
+				83C896F01D4BD1010026D765 /* GKRecordViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -260,16 +244,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		835BEC3D1D4A67FA002C0103 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				835BEC3E1D4A6813002C0103 /* jpush-ios-2.1.8.a */,
-				835BEC3F1D4A6813002C0103 /* JPUSHService.h */,
-				8341F0551D438D77006B730F /* GKDatabase */,
-			);
-			name = Lib;
-			sourceTree = "<group>";
-		};
 		838ED3D41D42F06B005D4687 = {
 			isa = PBXGroup;
 			children = (
@@ -285,8 +259,8 @@
 				838ED4211D4319F3005D4687 /* AudioToolbox.framework */,
 				838ED3DF1D42F06B005D4687 /* RecordForSaid */,
 				838ED3DE1D42F06B005D4687 /* Products */,
-				B28541FD7D278A19DC15032D /* Pods */,
-				F628040BFA94FE50485CD242 /* Frameworks */,
+				4BC76BE9C0BC9DD612AFDA32 /* Pods */,
+				E0E9C3C89628E782274C2096 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -301,7 +275,7 @@
 		838ED3DF1D42F06B005D4687 /* RecordForSaid */ = {
 			isa = PBXGroup;
 			children = (
-				835BEC3D1D4A67FA002C0103 /* Lib */,
+				8341F0551D438D77006B730F /* GKDatabase */,
 				8341F0421D43763F006B730F /* iflyMSC.framework */,
 				838ED3F71D42F07A005D4687 /* Classes */,
 				838ED40C1D42F07A005D4687 /* Other */,
@@ -456,12 +430,12 @@
 		838ED4091D42F07A005D4687 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8341F08F1D43D9A1006B730F /* GKAboutViewController.h */,
-				8341F0901D43D9A1006B730F /* GKAboutViewController.m */,
-				8341F0921D43D9F2006B730F /* GKAboutViewController.xib */,
-				8321D0301D49E858000B7B1D /* GKSettingViewController.h */,
-				8321D0311D49E858000B7B1D /* GKSettingViewController.m */,
-				8321D03E1D4A483F000B7B1D /* GKSettingViewController.xib */,
+				83C896DC1D4B005D0026D765 /* GKAboutViewController.h */,
+				83C896DD1D4B005D0026D765 /* GKAboutViewController.m */,
+				83C896DE1D4B005D0026D765 /* GKAboutViewController.xib */,
+				83C896DF1D4B005D0026D765 /* GKSettingViewController.h */,
+				83C896E01D4B005D0026D765 /* GKSettingViewController.m */,
+				83C896E11D4B005D0026D765 /* GKSettingViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -483,12 +457,10 @@
 		838ED40C1D42F07A005D4687 /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				8321D0271D49ADCF000B7B1D /* GKConst.h */,
-				8321D0281D49ADCF000B7B1D /* GKConst.m */,
-				8321D02D1D49DE9D000B7B1D /* UIBarButtonItem+GKExtension.h */,
-				8321D02E1D49DE9D000B7B1D /* UIBarButtonItem+GKExtension.m */,
-				8321D02A1D49DD13000B7B1D /* UIImage+GKExtension.h */,
-				8321D02B1D49DD13000B7B1D /* UIImage+GKExtension.m */,
+				83C896E61D4B00950026D765 /* GKConst.h */,
+				83C896E71D4B00950026D765 /* GKConst.m */,
+				83C896E81D4B00950026D765 /* UIImage+GKExtension.h */,
+				83C896E91D4B00950026D765 /* UIImage+GKExtension.m */,
 				8341F06B1D43A363006B730F /* NSDate+GKExtension.h */,
 				8341F06C1D43A363006B730F /* NSDate+GKExtension.m */,
 				8341F0681D439E17006B730F /* UIColor+GKExtension.h */,
@@ -512,10 +484,19 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		83C896EC1D4B018B0026D765 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				83C896ED1D4B01940026D765 /* GKThemeTool.h */,
+				83C896EE1D4B01940026D765 /* GKThemeTool.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		83F9C3581D473CDD0059746D /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				8321D0381D4A2A20000B7B1D /* Tools */,
+				83C896EC1D4B018B0026D765 /* Tools */,
 				83F9C3591D473CDD0059746D /* Controller */,
 				83F9C35A1D473CDD0059746D /* Model */,
 				83F9C35B1D473CDD0059746D /* View */,
@@ -549,22 +530,10 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		B28541FD7D278A19DC15032D /* Pods */ = {
+		E0E9C3C89628E782274C2096 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				544BB35FA2788E3A9E93DC1F /* Pods-RecordForSaid.debug.xcconfig */,
-				E65400139CBBDA64717D24D7 /* Pods-RecordForSaid.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		F628040BFA94FE50485CD242 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				835BEC451D4A6883002C0103 /* Security.framework */,
-				835BEC431D4A6845002C0103 /* CoreFoundation.framework */,
-				835BEC411D4A6838002C0103 /* CFNetwork.framework */,
-				BFA31E32E138E8762F1F6125 /* libPods-RecordForSaid.a */,
+				1CFDBCA2C8C39F355D81CC8F /* libPods-RecordForSaid.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -576,12 +545,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 838ED3F41D42F06B005D4687 /* Build configuration list for PBXNativeTarget "RecordForSaid" */;
 			buildPhases = (
-				D71B273B9D28A0B2E802FEAD /* 📦 Check Pods Manifest.lock */,
+				C4600744FF8CF024824E84B0 /* 📦 Check Pods Manifest.lock */,
 				838ED3D91D42F06B005D4687 /* Sources */,
 				838ED3DA1D42F06B005D4687 /* Frameworks */,
 				838ED3DB1D42F06B005D4687 /* Resources */,
-				231035A2A45A4A539158B859 /* 📦 Embed Pods Frameworks */,
-				47ACCF6B1FB8506D72575679 /* 📦 Copy Pods Resources */,
+				CF48C52037C9D71077763E1B /* 📦 Embed Pods Frameworks */,
+				9E5B12BBAA57DCCC002125A6 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -630,12 +599,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83C896E51D4B005D0026D765 /* GKSettingViewController.xib in Resources */,
 				838ED3F01D42F06B005D4687 /* LaunchScreen.storyboard in Resources */,
-				8321D03D1D4A2BEB000B7B1D /* colorConfig.plist in Resources */,
 				838ED3ED1D42F06B005D4687 /* Assets.xcassets in Resources */,
-				8321D03F1D4A483F000B7B1D /* GKSettingViewController.xib in Resources */,
+				83C896F11D4BD1010026D765 /* GKRecordViewController.xib in Resources */,
+				83C896E31D4B005D0026D765 /* GKAboutViewController.xib in Resources */,
 				838ED3EB1D42F06B005D4687 /* Main.storyboard in Resources */,
-				8341F0931D43D9F2006B730F /* GKAboutViewController.xib in Resources */,
 				83F9C3601D473CDD0059746D /* GKCommonCell.xib in Resources */,
 				8341F08E1D43BA82006B730F /* GKDetailViewController.xib in Resources */,
 			);
@@ -644,22 +613,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		231035A2A45A4A539158B859 /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecordForSaid/Pods-RecordForSaid-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		47ACCF6B1FB8506D72575679 /* 📦 Copy Pods Resources */ = {
+		9E5B12BBAA57DCCC002125A6 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -674,7 +628,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecordForSaid/Pods-RecordForSaid-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D71B273B9D28A0B2E802FEAD /* 📦 Check Pods Manifest.lock */ = {
+		C4600744FF8CF024824E84B0 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -689,6 +643,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		CF48C52037C9D71077763E1B /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RecordForSaid/Pods-RecordForSaid-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -697,31 +666,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				83F9C3631D473CFC0059746D /* GKBaseViewController.m in Sources */,
-				8321D03B1D4A2A26000B7B1D /* GKThemeTool.m in Sources */,
-				8321D0291D49ADCF000B7B1D /* GKConst.m in Sources */,
 				83F9C35F1D473CDD0059746D /* GKCommonCell.m in Sources */,
 				838ED4141D42F123005D4687 /* GKMeViewController.m in Sources */,
 				8341F07E1D43ACF1006B730F /* GKHomeViewController.m in Sources */,
 				8341F0641D43932D006B730F /* GKBlockedBarButtonItem.m in Sources */,
-				8341F0911D43D9A1006B730F /* GKAboutViewController.m in Sources */,
+				83C896E41D4B005D0026D765 /* GKSettingViewController.m in Sources */,
 				8341F0541D438B5E006B730F /* GKRecordViewController.m in Sources */,
-				8321D02F1D49DE9D000B7B1D /* UIBarButtonItem+GKExtension.m in Sources */,
-				8321D02C1D49DD13000B7B1D /* UIImage+GKExtension.m in Sources */,
 				8341F0671D439820006B730F /* GKPlaceholderTextView.m in Sources */,
 				838ED40D1D42F07A005D4687 /* GKNavigationController.m in Sources */,
 				838ED3E51D42F06B005D4687 /* AppDelegate.m in Sources */,
 				8341F06A1D439E17006B730F /* UIColor+GKExtension.m in Sources */,
+				83C896EB1D4B00950026D765 /* UIImage+GKExtension.m in Sources */,
 				8341F08C1D43BA37006B730F /* GKDetailViewController.m in Sources */,
 				838ED4191D42FB73005D4687 /* GKTabBar.m in Sources */,
 				8341F06D1D43A363006B730F /* NSDate+GKExtension.m in Sources */,
 				838ED41C1D42FCB6005D4687 /* UIView+GKFrame.m in Sources */,
+				83C896EF1D4B01940026D765 /* GKThemeTool.m in Sources */,
+				83C896EA1D4B00950026D765 /* GKConst.m in Sources */,
 				8341F05B1D438D77006B730F /* GKDatabaseManager.m in Sources */,
 				8341F05C1D438D77006B730F /* GKObjcProperty.m in Sources */,
 				8341F0611D438E3F006B730F /* GKRecordModel.m in Sources */,
 				838ED3E21D42F06B005D4687 /* main.m in Sources */,
 				8341F07B1D43AAEA006B730F /* UIView+GKExtension.m in Sources */,
-				8321D0331D49E858000B7B1D /* GKSettingViewController.m in Sources */,
 				838ED40E1D42F07A005D4687 /* GKTabBarController.m in Sources */,
+				83C896E21D4B005D0026D765 /* GKAboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,7 +799,7 @@
 		};
 		838ED3F51D42F06B005D4687 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 544BB35FA2788E3A9E93DC1F /* Pods-RecordForSaid.debug.xcconfig */;
+			baseConfigurationReference = 80FE49B35EA43067B843BBD5 /* Pods-RecordForSaid.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -840,7 +808,6 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/RecordForSaid/Lib",
 					"$(PROJECT_DIR)/RecordForSaid",
 				);
 				GCC_PREFIX_HEADER = RecordForSaid/PrefixHeader.pch;
@@ -851,13 +818,9 @@
 				INFOPLIST_FILE = RecordForSaid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/RecordForSaid/Lib",
-					"$(PROJECT_DIR)/RecordForSaid",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACH_O_TYPE = mh_execute;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chriscaixx.RecordForSaid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "28071c42-f1c9-46c2-9ab9-9488546b27d6";
@@ -868,7 +831,7 @@
 		};
 		838ED3F61D42F06B005D4687 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E65400139CBBDA64717D24D7 /* Pods-RecordForSaid.release.xcconfig */;
+			baseConfigurationReference = 4B9405457A3C9C002F0D3CF5 /* Pods-RecordForSaid.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -877,7 +840,6 @@
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/RecordForSaid/Lib",
 					"$(PROJECT_DIR)/RecordForSaid",
 				);
 				GCC_PREFIX_HEADER = RecordForSaid/PrefixHeader.pch;
@@ -888,13 +850,9 @@
 				INFOPLIST_FILE = RecordForSaid/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/RecordForSaid/Lib",
-					"$(PROJECT_DIR)/RecordForSaid",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACH_O_TYPE = mh_execute;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chriscaixx.RecordForSaid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "28071c42-f1c9-46c2-9ab9-9488546b27d6";

@@ -64,7 +64,7 @@
         <scene sceneID="whc-Jm-O2x">
             <objects>
                 <navigationController title="主页" id="WKk-it-Lbe" customClass="GKNavigationController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="今日" image="icon_tabbar_home_active_25x25_" id="0Bx-Yr-QYM"/>
+                    <tabBarItem key="tabBarItem" title="当日" image="icon_tabbar_home_active_25x25_" id="0Bx-Yr-QYM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rKP-yP-pnJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -14,6 +14,7 @@
 
 @implementation GKDetailViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.automaticallyAdjustsScrollViewInsets = NO;
@@ -35,4 +36,5 @@
     [super viewWillDisappear:animated];
     [MobClick endLogPageView:@"detail"];
 }
+
 @end

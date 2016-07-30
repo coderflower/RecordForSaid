@@ -17,11 +17,11 @@
 + (void)initialize {
     // 设置当前类的全局导航条背景图片
     [GKThemeTool setTheme];
-
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
     UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:)];
