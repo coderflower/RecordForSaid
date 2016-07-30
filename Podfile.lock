@@ -25,6 +25,7 @@ PODS:
   - SFFoundation/MRC (1.0.0)
   - SFiOSKit (1.0.0):
     - SFFoundation
+  - UMengAnalytics (4.0.4)
   - ZipArchive (1.2.0)
   - ZipKit (1.0.3)
 
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - Savanna (from `https://github.com/yang2507366/Savanna.git`)
   - SFFoundation (from `https://github.com/yangzexin/SFLibraries.git`)
   - SFiOSKit (from `https://github.com/yangzexin/SFLibraries.git`)
+  - UMengAnalytics
 
 EXTERNAL SOURCES:
   Savanna:
@@ -58,7 +60,10 @@ SPEC CHECKSUMS:
   Savanna: fefa468e09793cc5e611e2acea6863ed90180d93
   SFFoundation: aff55b3de1a7f52e323f7d59163830755bafdf12
   SFiOSKit: 36515035c50b92fd8050350864e8a37e9ac55116
+  UMengAnalytics: 4ed421fb3bca63b26fc13c947743cabf3831d199
   ZipArchive: 83ea626ea99bae97743ae6413aeb493dd4e48335
   ZipKit: 594735e7ad2fd3ee7349759681a0423a1b296572
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 307323f7f3805a9b726b2f78e3a7cd9d6309d32d
+
+COCOAPODS: 1.0.0

@@ -16,7 +16,6 @@
 #import "UIView+GKExtension.h"
 #import "GKConst.h"
 #import "UIImage+GKExtension.h"
-#import "UIBarButtonItem+GKExtension.h"
 #import "GKThemeTool.h"
 /** 自定义Log */
 #ifdef DEBUG

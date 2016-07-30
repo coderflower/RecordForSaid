@@ -10,8 +10,7 @@
 #import "GKCommonCell.h"
 #import "GKRecordModel.h"
 #import "GKBlockedBarButtonItem.h"
-#import "GKSettingViewController.h"
-
+#import "GKAboutViewController.h"
 #import <Savanna/Savanna.h>
 #import <SFFoundation/SFFoundation.h>
 #import <SFiOSKit/SFiOSKit.h>

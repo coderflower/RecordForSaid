@@ -7,5 +7,6 @@ target 'RecordForSaid' do
     pod 'SFFoundation', :git => 'https://github.com/yangzexin/SFLibraries.git'
     pod 'SFiOSKit', :git => 'https://github.com/yangzexin/SFLibraries.git'
     pod 'Savanna', :git => 'https://github.com/yang2507366/Savanna.git'
+    pod 'UMengAnalytics'
 end
 
