@@ -28,8 +28,12 @@
 		8341F07E1D43ACF1006B730F /* GKHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341F07D1D43ACF1006B730F /* GKHomeViewController.m */; };
 		8341F08C1D43BA37006B730F /* GKDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341F08B1D43BA37006B730F /* GKDetailViewController.m */; };
 		8341F08E1D43BA82006B730F /* GKDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8341F08D1D43BA82006B730F /* GKDetailViewController.xib */; };
-		8341F0911D43D9A1006B730F /* GKSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341F0901D43D9A1006B730F /* GKSettingViewController.m */; };
-		8341F0931D43D9F2006B730F /* GKSettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8341F0921D43D9F2006B730F /* GKSettingViewController.xib */; };
+		8341F0911D43D9A1006B730F /* GKAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8341F0901D43D9A1006B730F /* GKAboutViewController.m */; };
+		8341F0931D43D9F2006B730F /* GKAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8341F0921D43D9F2006B730F /* GKAboutViewController.xib */; };
+		835BEC401D4A6813002C0103 /* jpush-ios-2.1.8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 835BEC3E1D4A6813002C0103 /* jpush-ios-2.1.8.a */; };
+		835BEC421D4A6838002C0103 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835BEC411D4A6838002C0103 /* CFNetwork.framework */; };
+		835BEC441D4A6845002C0103 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835BEC431D4A6845002C0103 /* CoreFoundation.framework */; };
+		835BEC461D4A6883002C0103 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 835BEC451D4A6883002C0103 /* Security.framework */; };
 		837314D11D436E880021EC47 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838ED4211D4319F3005D4687 /* AudioToolbox.framework */; };
 		837314D21D436EAD0021EC47 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 838ED4251D431A08005D4687 /* SystemConfiguration.framework */; };
 		838ED3E21D42F06B005D4687 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 838ED3E11D42F06B005D4687 /* main.m */; };
@@ -45,6 +49,7 @@
 		83F9C35F1D473CDD0059746D /* GKCommonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F9C35D1D473CDD0059746D /* GKCommonCell.m */; };
 		83F9C3601D473CDD0059746D /* GKCommonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F9C35E1D473CDD0059746D /* GKCommonCell.xib */; };
 		83F9C3631D473CFC0059746D /* GKBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F9C3621D473CFC0059746D /* GKBaseViewController.m */; };
+		8E6290FC085687CD016E573D /* libPods-RecordForSaid.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA31E32E138E8762F1F6125 /* libPods-RecordForSaid.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,9 +85,14 @@
 		8341F08A1D43BA37006B730F /* GKDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKDetailViewController.h; sourceTree = "<group>"; };
 		8341F08B1D43BA37006B730F /* GKDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKDetailViewController.m; sourceTree = "<group>"; };
 		8341F08D1D43BA82006B730F /* GKDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKDetailViewController.xib; sourceTree = "<group>"; };
-		8341F08F1D43D9A1006B730F /* GKSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKSettingViewController.h; sourceTree = "<group>"; };
-		8341F0901D43D9A1006B730F /* GKSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKSettingViewController.m; sourceTree = "<group>"; };
-		8341F0921D43D9F2006B730F /* GKSettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKSettingViewController.xib; sourceTree = "<group>"; };
+		8341F08F1D43D9A1006B730F /* GKAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GKAboutViewController.h; sourceTree = "<group>"; };
+		8341F0901D43D9A1006B730F /* GKAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GKAboutViewController.m; sourceTree = "<group>"; };
+		8341F0921D43D9F2006B730F /* GKAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GKAboutViewController.xib; sourceTree = "<group>"; };
+		835BEC3E1D4A6813002C0103 /* jpush-ios-2.1.8.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-2.1.8.a"; sourceTree = "<group>"; };
+		835BEC3F1D4A6813002C0103 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		835BEC411D4A6838002C0103 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		835BEC431D4A6845002C0103 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		835BEC451D4A6883002C0103 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		838ED3DD1D42F06B005D4687 /* RecordForSaid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecordForSaid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838ED3E11D42F06B005D4687 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		838ED3E31D42F06B005D4687 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,15 +130,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				835BEC461D4A6883002C0103 /* Security.framework in Frameworks */,
+				8341F0441D4379C4006B730F /* CoreGraphics.framework in Frameworks */,
+				837314D21D436EAD0021EC47 /* SystemConfiguration.framework in Frameworks */,
+				8341F0461D4379D1006B730F /* CoreTelephony.framework in Frameworks */,
+				835BEC441D4A6845002C0103 /* CoreFoundation.framework in Frameworks */,
+				835BEC421D4A6838002C0103 /* CFNetwork.framework in Frameworks */,
 				8341F05E1D438DF4006B730F /* libsqlite3.tbd in Frameworks */,
 				8341F04D1D437AA3006B730F /* libz.tbd in Frameworks */,
 				8341F04B1D437A1E006B730F /* AddressBook.framework in Frameworks */,
 				8341F0491D437A17006B730F /* AVFoundation.framework in Frameworks */,
 				8341F0481D4379EA006B730F /* CoreLocation.framework in Frameworks */,
-				8341F0461D4379D1006B730F /* CoreTelephony.framework in Frameworks */,
-				8341F0441D4379C4006B730F /* CoreGraphics.framework in Frameworks */,
+				835BEC401D4A6813002C0103 /* jpush-ios-2.1.8.a in Frameworks */,
 				8341F0431D43763F006B730F /* iflyMSC.framework in Frameworks */,
-				837314D21D436EAD0021EC47 /* SystemConfiguration.framework in Frameworks */,
 				837314D11D436E880021EC47 /* AudioToolbox.framework in Frameworks */,
 				6518D9C1030F123439778BA5 /* libPods-RecordForSaid.a in Frameworks */,
 			);
@@ -137,6 +151,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8321D0381D4A2A20000B7B1D /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				8321D0391D4A2A26000B7B1D /* GKThemeTool.h */,
+				8321D03A1D4A2A26000B7B1D /* GKThemeTool.m */,
+				8321D03C1D4A2BEB000B7B1D /* colorConfig.plist */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		8341F04E1D438B45006B730F /* Record */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +242,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		835BEC3D1D4A67FA002C0103 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				835BEC3E1D4A6813002C0103 /* jpush-ios-2.1.8.a */,
+				835BEC3F1D4A6813002C0103 /* JPUSHService.h */,
+				8341F0551D438D77006B730F /* GKDatabase */,
+			);
+			name = Lib;
+			sourceTree = "<group>";
+		};
 		838ED3D41D42F06B005D4687 = {
 			isa = PBXGroup;
 			children = (
@@ -249,7 +283,7 @@
 		838ED3DF1D42F06B005D4687 /* RecordForSaid */ = {
 			isa = PBXGroup;
 			children = (
-				8341F0551D438D77006B730F /* GKDatabase */,
+				835BEC3D1D4A67FA002C0103 /* Lib */,
 				8341F0421D43763F006B730F /* iflyMSC.framework */,
 				838ED3F71D42F07A005D4687 /* Classes */,
 				838ED40C1D42F07A005D4687 /* Other */,
@@ -404,9 +438,12 @@
 		838ED4091D42F07A005D4687 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8341F08F1D43D9A1006B730F /* GKSettingViewController.h */,
-				8341F0901D43D9A1006B730F /* GKSettingViewController.m */,
-				8341F0921D43D9F2006B730F /* GKSettingViewController.xib */,
+				8341F08F1D43D9A1006B730F /* GKAboutViewController.h */,
+				8341F0901D43D9A1006B730F /* GKAboutViewController.m */,
+				8341F0921D43D9F2006B730F /* GKAboutViewController.xib */,
+				8321D0301D49E858000B7B1D /* GKSettingViewController.h */,
+				8321D0311D49E858000B7B1D /* GKSettingViewController.m */,
+				8321D03E1D4A483F000B7B1D /* GKSettingViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -428,6 +465,12 @@
 		838ED40C1D42F07A005D4687 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				8321D0271D49ADCF000B7B1D /* GKConst.h */,
+				8321D0281D49ADCF000B7B1D /* GKConst.m */,
+				8321D02D1D49DE9D000B7B1D /* UIBarButtonItem+GKExtension.h */,
+				8321D02E1D49DE9D000B7B1D /* UIBarButtonItem+GKExtension.m */,
+				8321D02A1D49DD13000B7B1D /* UIImage+GKExtension.h */,
+				8321D02B1D49DD13000B7B1D /* UIImage+GKExtension.m */,
 				8341F06B1D43A363006B730F /* NSDate+GKExtension.h */,
 				8341F06C1D43A363006B730F /* NSDate+GKExtension.m */,
 				8341F0681D439E17006B730F /* UIColor+GKExtension.h */,
@@ -454,6 +497,7 @@
 		83F9C3581D473CDD0059746D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8321D0381D4A2A20000B7B1D /* Tools */,
 				83F9C3591D473CDD0059746D /* Controller */,
 				83F9C35A1D473CDD0059746D /* Model */,
 				83F9C35B1D473CDD0059746D /* View */,
@@ -566,9 +610,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				838ED3F01D42F06B005D4687 /* LaunchScreen.storyboard in Resources */,
+				8321D03D1D4A2BEB000B7B1D /* colorConfig.plist in Resources */,
 				838ED3ED1D42F06B005D4687 /* Assets.xcassets in Resources */,
+				8321D03F1D4A483F000B7B1D /* GKSettingViewController.xib in Resources */,
 				838ED3EB1D42F06B005D4687 /* Main.storyboard in Resources */,
-				8341F0931D43D9F2006B730F /* GKSettingViewController.xib in Resources */,
+				8341F0931D43D9F2006B730F /* GKAboutViewController.xib in Resources */,
 				83F9C3601D473CDD0059746D /* GKCommonCell.xib in Resources */,
 				8341F08E1D43BA82006B730F /* GKDetailViewController.xib in Resources */,
 			);
@@ -630,12 +676,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				83F9C3631D473CFC0059746D /* GKBaseViewController.m in Sources */,
+				8321D03B1D4A2A26000B7B1D /* GKThemeTool.m in Sources */,
+				8321D0291D49ADCF000B7B1D /* GKConst.m in Sources */,
 				83F9C35F1D473CDD0059746D /* GKCommonCell.m in Sources */,
 				838ED4141D42F123005D4687 /* GKMeViewController.m in Sources */,
 				8341F07E1D43ACF1006B730F /* GKHomeViewController.m in Sources */,
 				8341F0641D43932D006B730F /* GKBlockedBarButtonItem.m in Sources */,
-				8341F0911D43D9A1006B730F /* GKSettingViewController.m in Sources */,
+				8341F0911D43D9A1006B730F /* GKAboutViewController.m in Sources */,
 				8341F0541D438B5E006B730F /* GKRecordViewController.m in Sources */,
+				8321D02F1D49DE9D000B7B1D /* UIBarButtonItem+GKExtension.m in Sources */,
+				8321D02C1D49DD13000B7B1D /* UIImage+GKExtension.m in Sources */,
 				8341F0671D439820006B730F /* GKPlaceholderTextView.m in Sources */,
 				838ED40D1D42F07A005D4687 /* GKNavigationController.m in Sources */,
 				838ED3E51D42F06B005D4687 /* AppDelegate.m in Sources */,
@@ -649,6 +699,7 @@
 				8341F0611D438E3F006B730F /* GKRecordModel.m in Sources */,
 				838ED3E21D42F06B005D4687 /* main.m in Sources */,
 				8341F07B1D43AAEA006B730F /* UIView+GKExtension.m in Sources */,
+				8321D0331D49E858000B7B1D /* GKSettingViewController.m in Sources */,
 				838ED40E1D42F07A005D4687 /* GKTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

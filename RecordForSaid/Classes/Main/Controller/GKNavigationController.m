@@ -8,7 +8,7 @@
 
 #import "GKNavigationController.h"
 
-@interface GKNavigationController ()
+@interface GKNavigationController ()<UIGestureRecognizerDelegate>
 
 @end
 
@@ -16,40 +16,35 @@
 
 + (void)initialize {
     // 设置当前类的全局导航条背景图片
-    UINavigationBar *bar = [UINavigationBar appearanceWhenContainedIn:self, nil];
-    [bar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
-    // 设置当类的全局导航条标题字体
-    NSMutableDictionary *attri = [NSMutableDictionary dictionary];
-    attri[NSFontAttributeName] = [UIFont boldSystemFontOfSize:20];
-    [bar setTitleTextAttributes:attri];
-    UIBarButtonItem *item = [UIBarButtonItem appearance];
-    NSMutableDictionary *normalAttri = [NSMutableDictionary dictionary];
-    normalAttri[NSForegroundColorAttributeName] = [UIColor blackColor];
-    normalAttri[NSFontAttributeName] = [UIFont systemFontOfSize:17];
-    [item setTitleTextAttributes:normalAttri forState:UIControlStateNormal];
-    
-    NSMutableDictionary *disabledAttri = [NSMutableDictionary dictionary];
-    disabledAttri[NSForegroundColorAttributeName] = [UIColor lightGrayColor];
-    [item setTitleTextAttributes:disabledAttri forState:UIControlStateDisabled];
+    [GKThemeTool setTheme];
+
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+   
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wundeclared-selector"
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:)];
+    
+    [self.view addGestureRecognizer:pan];
+    
+    pan.delegate = self;
+    
+    // 清空滑动返回手势代理, 恢复滑动功能
+    self.interactivePopGestureRecognizer.enabled = NO;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    if (self.viewControllers.count > 0) {
+        [viewController setHidesBottomBarWhenPushed:YES];
+    }
+    [super pushViewController:viewController animated:animated];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
+{
+    // 判断如果当前控制器处于子控制器的时候, 才触发手势
+    return self.childViewControllers.count > 1;
 }
-*/
 
 @end
