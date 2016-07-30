@@ -30,7 +30,6 @@
     // 系统的tabBar属性是readonly,只能利用KVC修改
     [self setValue:tabBar forKey:@"tabBar"];
     GKWeakSelf(self)
-    GKNavigationController * nav = [[GKNavigationController alloc]initWithRootViewController:[[GKRecordViewController alloc] init]];
     tabBar.publishClick = ^{
         [weakself presentViewController:[[GKRecordViewController alloc] init] animated:YES completion:nil];
     };

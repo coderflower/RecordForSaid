@@ -146,7 +146,18 @@
     [self startListenning];
 }
 - (IBAction)completeButtonClick:(UIButton *)sender {
+    
+    [self.view endEditing:YES];
+    GKRecordModel * model = [[GKRecordModel alloc]init];
+    model.title = self.textField.text;
+    model.record = self.contentTextView.text;
+    model.createTime = [[NSDate new] gk_yyyyMMddHHmmTimeString];
+    if (model.title.length || model.record.length) {
+        // 保存到数据库中
+        [[GKDatabaseManager sharedManager]insertDataFromObject:model];
+    }
     [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 /// 开始识别
