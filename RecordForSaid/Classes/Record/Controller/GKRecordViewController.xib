@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GKRecordViewController">
+            <connections>
+                <outlet property="completeButton" destination="bu8-dT-iQs" id="Ir1-Ih-Tw8"/>
+                <outlet property="contentTextView" destination="4Ye-8h-K7s" id="TMZ-e2-hdT"/>
+                <outlet property="contentView" destination="AA7-D9-GFz" id="Lwv-fV-mJJ"/>
+                <outlet property="textField" destination="cNy-Tr-1KQ" id="pfa-4X-8Nh"/>
+                <outlet property="topBar" destination="rvb-4C-ll2" id="cRS-BQ-emW"/>
+                <outlet property="view" destination="iN0-l3-epB" id="HfL-Tv-4FS"/>
+                <outlet property="voiceButton" destination="SKy-D7-1an" id="Mgf-Nh-cT9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rvb-4C-ll2">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bu8-dT-iQs">
+                            <rect key="frame" x="331" y="24" width="34" height="30"/>
+                            <state key="normal" title="完 成">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="completeButtonClick:" destination="-1" eventType="touchUpInside" id="qPT-EL-CSR"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="bu8-dT-iQs" secondAttribute="trailing" constant="10" id="7KC-V6-OqN"/>
+                        <constraint firstAttribute="height" constant="64" id="IdB-zt-tsG"/>
+                        <constraint firstAttribute="bottom" secondItem="bu8-dT-iQs" secondAttribute="bottom" constant="10" id="QWa-k0-Ddb"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AA7-D9-GFz">
+                    <rect key="frame" x="10" y="74" width="355" height="467"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请在这里输入标题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cNy-Tr-1KQ">
+                            <rect key="frame" x="0.0" y="0.0" width="355" height="35"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="mZO-P8-uZc"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4Ye-8h-K7s" customClass="GKPlaceholderTextView">
+                            <rect key="frame" x="0.0" y="45" width="355" height="422"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="4Ye-8h-K7s" firstAttribute="leading" secondItem="AA7-D9-GFz" secondAttribute="leading" id="2ZE-c6-7M2"/>
+                        <constraint firstItem="cNy-Tr-1KQ" firstAttribute="top" secondItem="AA7-D9-GFz" secondAttribute="top" id="3ED-Mi-qlA"/>
+                        <constraint firstAttribute="trailing" secondItem="4Ye-8h-K7s" secondAttribute="trailing" id="3qm-lb-WDi"/>
+                        <constraint firstAttribute="trailing" secondItem="cNy-Tr-1KQ" secondAttribute="trailing" id="cQ8-55-hiY"/>
+                        <constraint firstAttribute="bottom" secondItem="4Ye-8h-K7s" secondAttribute="bottom" id="h6h-Wz-VHA"/>
+                        <constraint firstItem="cNy-Tr-1KQ" firstAttribute="leading" secondItem="AA7-D9-GFz" secondAttribute="leading" id="vOi-LV-HDq"/>
+                        <constraint firstItem="4Ye-8h-K7s" firstAttribute="top" secondItem="cNy-Tr-1KQ" secondAttribute="bottom" constant="10" id="yNC-Ri-XqZ"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKy-D7-1an">
+                    <rect key="frame" x="134" y="551" width="106" height="106"/>
+                    <color key="backgroundColor" red="0.47058823529411764" green="0.78431372549019607" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="SKy-D7-1an" secondAttribute="height" multiplier="1:1" id="y1R-fR-hxi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <state key="normal" title="开始录音">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="voiceButtonClick" destination="-1" eventType="touchUpInside" id="WK4-8x-hn4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="SKy-D7-1an" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2fh-RF-KMo"/>
+                <constraint firstItem="AA7-D9-GFz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="74" id="CKM-UQ-TZv"/>
+                <constraint firstItem="rvb-4C-ll2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EkO-oG-M3q"/>
+                <constraint firstItem="AA7-D9-GFz" firstAttribute="top" secondItem="rvb-4C-ll2" secondAttribute="bottom" constant="10" id="J9A-Yo-RHu"/>
+                <constraint firstItem="SKy-D7-1an" firstAttribute="top" secondItem="AA7-D9-GFz" secondAttribute="bottom" constant="10" id="Jre-Gn-Zjn"/>
+                <constraint firstAttribute="trailing" secondItem="rvb-4C-ll2" secondAttribute="trailing" id="MMb-1H-fX4"/>
+                <constraint firstItem="rvb-4C-ll2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YvY-jV-FTV"/>
+                <constraint firstAttribute="bottom" secondItem="SKy-D7-1an" secondAttribute="bottom" constant="10" id="cZf-nx-yOg"/>
+                <constraint firstItem="AA7-D9-GFz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="ckA-4U-QqP"/>
+                <constraint firstAttribute="trailing" secondItem="AA7-D9-GFz" secondAttribute="trailing" constant="10" id="g8s-1h-WHe"/>
+                <constraint firstItem="AA7-D9-GFz" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.7" id="vn8-dg-hgs"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="CKM-UQ-TZv"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

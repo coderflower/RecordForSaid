@@ -573,6 +573,7 @@
 				TargetAttributes = {
 					838ED3DC1D42F06B005D4687 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 5ZU447NC6P;
 					};
 				};
 			};
@@ -823,7 +824,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chriscaixx.RecordForSaid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "28071c42-f1c9-46c2-9ab9-9488546b27d6";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -855,7 +856,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.chriscaixx.RecordForSaid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "28071c42-f1c9-46c2-9ab9-9488546b27d6";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
